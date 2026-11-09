@@ -1,0 +1,226 @@
+[synth] ops/ops1/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops2/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops2/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops3/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops3/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] ops/ops4/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops4/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops5/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops5/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops6/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops6/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] ops/ops7/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] ops/ops7/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops8/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops8/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops9/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops9/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops10/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops10/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em1/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em2/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em2/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em3/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em3/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em4/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em4/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em5/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em5/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em6/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em6/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em7/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em7/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em8/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em8/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em9/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em9/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em10/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em10/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin1/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin2/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin2/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin3/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin3/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] finance/fin4/unverified: ok=True admitted=False rounds=1 failed1=['ifc']
+[synth] finance/fin4/verified: ok=True admitted=True rounds=2 failed1=['catalog', 'ifc']
+[synth] finance/fin5/unverified: ok=True admitted=False rounds=2 failed1=['catalog', 'ifc']
+[synth] finance/fin5/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin6/unverified: ok=True admitted=False rounds=1 failed1=['ifc']
+[synth] finance/fin6/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin7/unverified: ok=True admitted=False rounds=1 failed1=['ifc']
+[synth] finance/fin7/verified: ok=True admitted=True rounds=2 failed1=['catalog', 'ifc']
+[synth] finance/fin8/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] finance/fin8/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin9/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin9/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] finance/fin10/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin10/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] code/code1/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code1/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code2/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code2/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code3/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code3/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code4/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code4/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code5/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code5/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code6/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code6/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code7/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code7/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code8/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code8/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code9/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code9/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code10/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code10/verified: ok=True admitted=True rounds=3 failed1=None
+3600 episodes to run (0 already done); spent so far $12.76
+  25/3600 episodes, 0.7 min, run spent $1.58, total $12.87
+  50/3600 episodes, 1.1 min, run spent $1.66, total $12.94
+  75/3600 episodes, 1.5 min, run spent $1.71, total $13.00
+  100/3600 episodes, 1.9 min, run spent $1.77, total $13.06
+  125/3600 episodes, 2.4 min, run spent $1.86, total $13.15
+  150/3600 episodes, 2.9 min, run spent $1.94, total $13.23
+  175/3600 episodes, 3.2 min, run spent $2.00, total $13.28
+  200/3600 episodes, 3.6 min, run spent $2.06, total $13.34
+  225/3600 episodes, 4.3 min, run spent $2.16, total $13.45
+  250/3600 episodes, 4.6 min, run spent $2.22, total $13.51
+  275/3600 episodes, 5.1 min, run spent $2.29, total $13.57
+  300/3600 episodes, 5.6 min, run spent $2.36, total $13.65
+  325/3600 episodes, 6.1 min, run spent $2.45, total $13.73
+  350/3600 episodes, 6.4 min, run spent $2.50, total $13.79
+  375/3600 episodes, 6.9 min, run spent $2.57, total $13.85
+  400/3600 episodes, 7.4 min, run spent $2.65, total $13.94
+  425/3600 episodes, 7.9 min, run spent $2.73, total $14.01
+  450/3600 episodes, 8.4 min, run spent $2.80, total $14.08
+  475/3600 episodes, 8.8 min, run spent $2.85, total $14.13
+  500/3600 episodes, 9.4 min, run spent $2.93, total $14.22
+  525/3600 episodes, 9.9 min, run spent $3.01, total $14.30
+  550/3600 episodes, 10.4 min, run spent $3.08, total $14.37
+  575/3600 episodes, 10.7 min, run spent $3.12, total $14.41
+  600/3600 episodes, 11.4 min, run spent $3.22, total $14.51
+  625/3600 episodes, 11.9 min, run spent $3.31, total $14.59
+  650/3600 episodes, 12.4 min, run spent $3.36, total $14.65
+  675/3600 episodes, 12.8 min, run spent $3.42, total $14.71
+  700/3600 episodes, 13.4 min, run spent $3.51, total $14.80
+  725/3600 episodes, 14.0 min, run spent $3.59, total $14.88
+  750/3600 episodes, 14.4 min, run spent $3.64, total $14.93
+  775/3600 episodes, 14.9 min, run spent $3.71, total $15.00
+  800/3600 episodes, 15.6 min, run spent $3.81, total $15.09
+  825/3600 episodes, 16.1 min, run spent $3.87, total $15.15
+  850/3600 episodes, 16.6 min, run spent $3.93, total $15.22
+  875/3600 episodes, 17.3 min, run spent $4.01, total $15.30
+  900/3600 episodes, 17.8 min, run spent $4.09, total $15.38
+  925/3600 episodes, 18.2 min, run spent $4.14, total $15.43
+  950/3600 episodes, 18.8 min, run spent $4.20, total $15.49
+  975/3600 episodes, 19.3 min, run spent $4.28, total $15.56
+  1000/3600 episodes, 19.8 min, run spent $4.36, total $15.65
+  1025/3600 episodes, 20.3 min, run spent $4.44, total $15.73
+  1050/3600 episodes, 20.8 min, run spent $4.51, total $15.80
+  1075/3600 episodes, 21.3 min, run spent $4.59, total $15.88
+  1100/3600 episodes, 21.7 min, run spent $4.67, total $15.95
+  1125/3600 episodes, 22.3 min, run spent $4.74, total $16.03
+  1150/3600 episodes, 22.7 min, run spent $4.81, total $16.09
+  1175/3600 episodes, 23.2 min, run spent $4.87, total $16.16
+  1200/3600 episodes, 23.6 min, run spent $4.92, total $16.21
+  1225/3600 episodes, 24.2 min, run spent $4.99, total $16.28
+  1250/3600 episodes, 24.6 min, run spent $5.05, total $16.34
+  1275/3600 episodes, 25.1 min, run spent $5.12, total $16.41
+  1300/3600 episodes, 25.6 min, run spent $5.17, total $16.46
+  1325/3600 episodes, 26.1 min, run spent $5.25, total $16.54
+  1350/3600 episodes, 26.5 min, run spent $5.30, total $16.58
+  1375/3600 episodes, 27.0 min, run spent $5.35, total $16.63
+  1400/3600 episodes, 27.6 min, run spent $5.43, total $16.71
+  1425/3600 episodes, 28.1 min, run spent $5.51, total $16.80
+  1450/3600 episodes, 28.6 min, run spent $5.58, total $16.87
+  1475/3600 episodes, 29.2 min, run spent $5.66, total $16.95
+  1500/3600 episodes, 29.6 min, run spent $5.72, total $17.01
+  1525/3600 episodes, 30.1 min, run spent $5.79, total $17.07
+  1550/3600 episodes, 30.6 min, run spent $5.83, total $17.12
+  1575/3600 episodes, 31.2 min, run spent $5.92, total $17.21
+  1600/3600 episodes, 31.7 min, run spent $6.00, total $17.29
+  1625/3600 episodes, 32.2 min, run spent $6.08, total $17.37
+  1650/3600 episodes, 32.8 min, run spent $6.15, total $17.44
+  1675/3600 episodes, 33.2 min, run spent $6.22, total $17.50
+  1700/3600 episodes, 33.7 min, run spent $6.27, total $17.56
+  1725/3600 episodes, 34.4 min, run spent $6.34, total $17.63
+  1750/3600 episodes, 35.0 min, run spent $6.42, total $17.71
+  1775/3600 episodes, 35.6 min, run spent $6.51, total $17.80
+  1800/3600 episodes, 36.1 min, run spent $6.58, total $17.87
+  1825/3600 episodes, 36.7 min, run spent $6.66, total $17.95
+  1850/3600 episodes, 37.3 min, run spent $6.74, total $18.03
+  1875/3600 episodes, 37.8 min, run spent $6.80, total $18.09
+  1900/3600 episodes, 38.4 min, run spent $6.88, total $18.17
+  1925/3600 episodes, 39.0 min, run spent $6.96, total $18.25
+  1950/3600 episodes, 39.6 min, run spent $7.03, total $18.32
+  1975/3600 episodes, 40.2 min, run spent $7.11, total $18.40
+  2000/3600 episodes, 40.9 min, run spent $7.20, total $18.49
+  2025/3600 episodes, 41.5 min, run spent $7.27, total $18.56
+  2050/3600 episodes, 42.0 min, run spent $7.33, total $18.62
+  2075/3600 episodes, 42.7 min, run spent $7.42, total $18.71
+  2100/3600 episodes, 43.4 min, run spent $7.51, total $18.79
+  2125/3600 episodes, 43.9 min, run spent $7.56, total $18.85
+  2150/3600 episodes, 44.5 min, run spent $7.63, total $18.92
+  2175/3600 episodes, 45.1 min, run spent $7.71, total $19.00
+  2200/3600 episodes, 45.6 min, run spent $7.77, total $19.06
+  2225/3600 episodes, 46.4 min, run spent $7.85, total $19.13
+  2250/3600 episodes, 47.1 min, run spent $7.94, total $19.23
+  2275/3600 episodes, 47.6 min, run spent $8.00, total $19.29
+  2300/3600 episodes, 48.2 min, run spent $8.06, total $19.35
+  2325/3600 episodes, 48.9 min, run spent $8.16, total $19.44
+  2350/3600 episodes, 49.7 min, run spent $8.24, total $19.53
+  2375/3600 episodes, 50.3 min, run spent $8.32, total $19.60
+  2400/3600 episodes, 51.0 min, run spent $8.40, total $19.68
+  2425/3600 episodes, 51.7 min, run spent $8.49, total $19.78
+  2450/3600 episodes, 52.3 min, run spent $8.56, total $19.85
+  2475/3600 episodes, 53.0 min, run spent $8.63, total $19.91
+  2500/3600 episodes, 53.7 min, run spent $8.72, total $20.01
+  2525/3600 episodes, 54.3 min, run spent $8.79, total $20.08
+  2550/3600 episodes, 55.0 min, run spent $8.86, total $20.14
+  2575/3600 episodes, 55.7 min, run spent $8.93, total $20.22
+  2600/3600 episodes, 56.3 min, run spent $9.01, total $20.30
+  2625/3600 episodes, 57.0 min, run spent $9.09, total $20.37
+  2650/3600 episodes, 58.0 min, run spent $9.19, total $20.48
+  2675/3600 episodes, 59.2 min, run spent $9.33, total $20.62
+  2700/3600 episodes, 60.1 min, run spent $9.44, total $20.73
+  2725/3600 episodes, 61.1 min, run spent $9.55, total $20.84
+  2750/3600 episodes, 62.4 min, run spent $9.69, total $20.98
+  2775/3600 episodes, 63.3 min, run spent $9.80, total $21.09
+  2800/3600 episodes, 64.3 min, run spent $9.90, total $21.19
+  2825/3600 episodes, 65.6 min, run spent $10.04, total $21.33
+  2850/3600 episodes, 66.9 min, run spent $10.19, total $21.48
+  2875/3600 episodes, 67.8 min, run spent $10.28, total $21.57
+  2900/3600 episodes, 69.0 min, run spent $10.41, total $21.70
+  2925/3600 episodes, 69.9 min, run spent $10.51, total $21.80
+  2950/3600 episodes, 71.2 min, run spent $10.65, total $21.93
+  2975/3600 episodes, 72.2 min, run spent $10.75, total $22.03
+  3000/3600 episodes, 73.4 min, run spent $10.88, total $22.16
+  3025/3600 episodes, 74.3 min, run spent $10.95, total $22.23
+  3050/3600 episodes, 75.5 min, run spent $11.08, total $22.37
+  3075/3600 episodes, 76.8 min, run spent $11.21, total $22.50
+  3100/3600 episodes, 77.5 min, run spent $11.27, total $22.56
+  3125/3600 episodes, 78.9 min, run spent $11.41, total $22.70
+  3150/3600 episodes, 80.0 min, run spent $11.52, total $22.81
+  3175/3600 episodes, 81.3 min, run spent $11.65, total $22.94
+  3200/3600 episodes, 82.2 min, run spent $11.74, total $23.03
+  3225/3600 episodes, 83.7 min, run spent $11.89, total $23.17
+  3250/3600 episodes, 84.8 min, run spent $12.00, total $23.29
+  3275/3600 episodes, 85.9 min, run spent $12.12, total $23.41
+  3300/3600 episodes, 86.8 min, run spent $12.20, total $23.48
+  3325/3600 episodes, 88.1 min, run spent $12.33, total $23.62
+  3350/3600 episodes, 88.9 min, run spent $12.42, total $23.71
+  3375/3600 episodes, 89.8 min, run spent $12.52, total $23.80
+  3400/3600 episodes, 90.9 min, run spent $12.60, total $23.89
+  3425/3600 episodes, 92.3 min, run spent $12.76, total $24.04
+  3450/3600 episodes, 93.3 min, run spent $12.85, total $24.14
+  3475/3600 episodes, 94.4 min, run spent $12.95, total $24.24
+  3500/3600 episodes, 95.4 min, run spent $13.05, total $24.34
+  3525/3600 episodes, 96.7 min, run spent $13.18, total $24.47
+  3550/3600 episodes, 97.7 min, run spent $13.28, total $24.57
+  3575/3600 episodes, 98.9 min, run spent $13.40, total $24.69
+  3600/3600 episodes, 99.8 min, run spent $13.49, total $24.78
+done. run spent $13.49; total $24.78

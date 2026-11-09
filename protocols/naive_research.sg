@@ -1,0 +1,12 @@
+// Counter-example: a researcher with web access that directly instructs a code executor.
+// The IFC check fails and returns the attack path.
+protocol NaiveResearch {
+  roles User, Researcher, Web, Coder, Sandbox;
+  untrusted Web;
+  sensitive Coder -> Sandbox;
+  User -> Researcher : Question(str);
+  call Researcher -> Web : fetch(str) returns str;
+  Researcher -> Coder : Instructions(str);
+  call Coder -> Sandbox : run(str) returns str;
+  Coder -> User : Answer(str);
+}

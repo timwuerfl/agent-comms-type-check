@@ -1,0 +1,18 @@
+// Swarm-style handoffs: a triage agent routes the customer to exactly one specialist.
+protocol Handoff {
+  roles Customer, Triage, Billing, Tech, Refunds;
+  sensitive Billing -> Refunds;
+  Customer -> Triage : Ask(str);
+  choice at Triage {
+    Triage -> Billing : Handoff(str);
+    choice at Billing {
+      Billing -> Refunds : Refund({amount: int, order: str}) where amount >= 1 and amount <= 200;
+      Refunds -> Billing : Refunded(bool);
+      Billing -> Customer : Answer(str);
+    } or { Billing -> Customer : Answer(str); }
+  } or {
+    Triage -> Tech : Handoff(str);
+    Tech -> Customer : Answer(str);
+  }
+  property RefundOnlyViaBilling: * -> Refunds : Refund implies once Triage -> Billing : Handoff;
+}

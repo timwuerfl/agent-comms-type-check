@@ -1,0 +1,25 @@
+{
+ "ok": true,
+ "variant": "unverified",
+ "model": "claude-sonnet-5-5",
+ "domain": "email",
+ "task": "em9",
+ "src": "protocol EmailNoQuestions {\n  roles User, Assistant, Reader, Inbox, Confirm, Outbox;\n  User -> Assistant : Task(str) where len <= 2000;\n  Assistant -> Reader : Query(enum{alice, bob, team});\n  Reader -> Inbox : Fetch(enum{inbox, unread});\n  Inbox -> Reader : Emails(str);\n  Reader -> Assistant : Digest({sender: enum{alice, bob, team, other}, kind: enum{meeting, question, fyi, other}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11, none}});\n  Assistant -> Confirm : Draft({to: enum{alice, bob, team}, subject: str, body: str});\n  choice at Confirm {\n    Confirm -> Assistant : Confirmed(unit);\n    Assistant -> Outbox : Send({to: enum{alice, bob, team}, subject: str, body: str});\n    Assistant -> User : Report(str) where len <= 4000;\n  } or {\n    Confirm -> Assistant : Rejected(unit);\n    Assistant -> User : Report(str) where len <= 4000;\n  }\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol EmailNoQuestions {\n  roles User, Assistant, Reader, Inbox, Confirm, Outbox;\n  User -> Assistant : Task(str) where len <= 2000;\n  Assistant -> Reader : Query(enum{alice, bob, team});\n  Reader -> Inbox : Fetch(enum{inbox, unread});\n  Inbox -> Reader : Emails(str);\n  Reader -> Assistant : Digest({sender: enum{alice, bob, team, other}, kind: enum{meeting, question, fyi, other}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11, none}});\n  Assistant -> Confirm : Draft({to: enum{alice, bob, team}, subject: str, body: str});\n  choice at Confirm {\n    Confirm -> Assistant : Confirmed(unit);\n    Assistant -> Outbox : Send({to: enum{alice, bob, team}, subject: str, body: str});\n    Assistant -> User : Report(str) where len <= 4000;\n  } or {\n    Confirm -> Assistant : Rejected(unit);\n    Assistant -> User : Report(str) where len <= 4000;\n  }\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 11
+  }
+ ],
+ "n_rounds": 1,
+ "seconds": 6.0626208782196045,
+ "usd": 0.012766
+}

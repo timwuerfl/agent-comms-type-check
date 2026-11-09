@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "variant": "unverified",
+ "model": "claude-sonnet-5-5",
+ "domain": "finance",
+ "task": "fin9",
+ "src": "protocol AcmeInvoicePayment {\n  roles User, Clerk, Reader, Docs, Approver1, Approver2, Bank;\n  User -> Clerk : Task(str) where len <= 2000;\n  Clerk -> Reader : Fetch(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Reader -> Docs : Get(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Docs -> Reader : Invoice(str);\n  choice at Reader {\n    Reader -> Approver1 : Extracted({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n    choice at Approver1 {\n      Approver1 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n      Clerk -> Approver2 : Request({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n      choice at Approver2 {\n        Approver2 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n        Clerk -> Bank : Transfer({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n        Bank -> Clerk : Receipt(str) where len <= 500;\n        Clerk -> User : Report(str) where len <= 4000;\n        end;\n      } or {\n        Approver2 -> Clerk : Rejected(unit);\n        Clerk -> User : Report(str) where len <= 4000;\n        end;\n      }\n    } or {\n      Approver1 -> Clerk : Rejected(unit);\n      Clerk -> User : Report(str) where len <= 4000;\n      end;\n    }\n  } or {\n    Reader -> Clerk : Status(enum{found, not_found, unreadable});\n    Clerk -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol AcmeInvoicePayment {\n  roles User, Clerk, Reader, Docs, Approver1, Approver2, Bank;\n  User -> Clerk : Task(str) where len <= 2000;\n  Clerk -> Reader : Fetch(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  call Reader -> Docs : Get(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}) returns str;\n  choice at Reader {\n    Reader -> Approver1 : Extracted({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n    choice at Approver1 {\n      Approver1 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n      Clerk -> Approver2 : Request({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n      choice at Approver2 {\n        Approver2 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n        Clerk -> Bank : Transfer({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n        Bank -> Clerk : Receipt(str) where len <= 500;\n        Clerk -> User : Report(str) where len <= 4000;\n        end;\n      } or {\n        Approver2 -> Clerk : Rejected(unit);\n        Clerk -> User : Report(str) where len <= 4000;\n        end;\n      }\n    } or {\n      Approver1 -> Clerk : Rejected(unit);\n      Clerk -> User : Report(str) where len <= 4000;\n      end;\n    }\n  } or {\n    Reader -> Clerk : Status(enum{found, not_found, unreadable});\n    Clerk -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+   "stage": "checked",
+   "admitted": false,
+   "failed": [
+    "catalog"
+   ],
+   "noStuck": true,
+   "completion": true,
+   "states": 15
+  },
+  {
+   "round": 2,
+   "src": "protocol AcmeInvoicePayment {\n  roles User, Clerk, Reader, Docs, Approver1, Approver2, Bank;\n  User -> Clerk : Task(str) where len <= 2000;\n  Clerk -> Reader : Fetch(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Reader -> Docs : Get(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Docs -> Reader : Invoice(str);\n  choice at Reader {\n    Reader -> Approver1 : Extracted({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n    choice at Approver1 {\n      Approver1 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n      Clerk -> Approver2 : Request({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n      choice at Approver2 {\n        Approver2 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n        Clerk -> Bank : Transfer({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n        Bank -> Clerk : Receipt(str) where len <= 500;\n        Clerk -> User : Report(str) where len <= 4000;\n        end;\n      } or {\n        Approver2 -> Clerk : Rejected(unit);\n        Clerk -> User : Report(str) where len <= 4000;\n        end;\n      }\n    } or {\n      Approver1 -> Clerk : Rejected(unit);\n      Clerk -> User : Report(str) where len <= 4000;\n      end;\n    }\n  } or {\n    Reader -> Clerk : Status(enum{found, not_found, unreadable});\n    Clerk -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 15
+  }
+ ],
+ "n_rounds": 2,
+ "seconds": 15.271052122116089,
+ "usd": 0.039258
+}

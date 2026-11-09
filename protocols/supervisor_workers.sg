@@ -1,0 +1,15 @@
+// Supervisor / worker fan-out (map-reduce) with genuinely parallel workers.
+protocol SupervisorWorkers {
+  roles User, Supervisor, W1, W2, W3, Reducer;
+  User -> Supervisor : Job(str);
+  par {
+    Supervisor -> W1 : Shard(str); W1 -> Reducer : Partial(str);
+  } and {
+    Supervisor -> W2 : Shard(str); W2 -> Reducer : Partial(str);
+  } and {
+    Supervisor -> W3 : Shard(str); W3 -> Reducer : Partial(str);
+  }
+  Reducer -> Supervisor : Merged(str);
+  Supervisor -> User : Result(str);
+  property ReduceAfterAllShards: Reducer -> Supervisor : Merged implies (once W1 -> Reducer : Partial and once W2 -> Reducer : Partial and once W3 -> Reducer : Partial);
+}

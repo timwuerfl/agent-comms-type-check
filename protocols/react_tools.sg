@@ -1,0 +1,15 @@
+// ReAct-style tool loop over MCP tools (tools are roles), bounded to 6 steps.
+protocol ReActTools {
+  roles User, Agent, Search, Calc;
+  untrusted Search;
+  User -> Agent : Question(str);
+  rec Step max 6 {
+    choice at Agent {
+      call Agent -> Search : search(str) where len <= 200 returns str; continue Step;
+    } or {
+      call Agent -> Calc : calc({a: int, op: enum{add, sub, mul, div}, b: int}) returns int; continue Step;
+    } or {
+      Agent -> User : Answer(str);
+    }
+  }
+}

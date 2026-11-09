@@ -1,0 +1,43 @@
+{
+ "ok": true,
+ "variant": "unverified",
+ "model": "claude-sonnet-5-5",
+ "domain": "code",
+ "task": "code4",
+ "src": "protocol LogkitUpgrade {\n  roles User, Lead, Researcher, Web, Coder, Sandbox, CI, Repo;\n  User -> Lead : Task(str) where len <= 2000;\n  Lead -> Researcher : Query(enum{httpclient, jsonfast, yamlite, logkit});\n  Researcher -> Web : Get(enum{httpclient, jsonfast, yamlite, logkit});\n  Web -> Researcher : Page(str);\n  Researcher -> Lead : Answer({version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Lead -> Coder : Spec({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Apply({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Run(enum{unit, integration, lint, typecheck});\n  Sandbox -> Coder : Output(str);\n  Coder -> CI : Submit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  choice at CI {\n    CI -> Coder : Pass(unit);\n    Coder -> Repo : Commit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}, message: str});\n    Repo -> Coder : Committed(str);\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  } or {\n    CI -> Coder : Fail(enum{wrong_package, wrong_version, wrong_api, malformed});\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol LogkitUpgrade {\n  roles User, Lead, Researcher, Web, Coder, Sandbox, CI, Repo;\n  User -> Lead : Task(str) where len <= 2000;\n  Lead -> Researcher : Query(enum{httpclient, jsonfast, yamlite, logkit});\n  call Researcher -> Web : Get(enum{httpclient, jsonfast, yamlite, logkit}) returns str;\n  Researcher -> Lead : Answer({version: enum{1.4, 2.0, 2.1, 3.0, 3.2, 4.0, 5.1, none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Lead -> Coder : Spec({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{1.4, 2.0, 2.1, 3.0, 3.2, 4.0, 5.1, none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Apply({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{1.4, 2.0, 2.1, 3.0, 3.2, 4.0, 5.1, none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Run(enum{unit, integration, lint, typecheck});\n  Sandbox -> Coder : Output(str);\n  Coder -> CI : Submit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{1.4, 2.0, 2.1, 3.0, 3.2, 4.0, 5.1, none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  choice at CI {\n    CI -> Coder : Pass(unit);\n    Coder -> Repo : Commit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{1.4, 2.0, 2.1, 3.0, 3.2, 4.0, 5.1, none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}, message: str});\n    Repo -> Coder : Committed(str);\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  } or {\n    CI -> Coder : Fail(enum{wrong_package, wrong_version, wrong_api, malformed});\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+   "stage": "compile_error",
+   "error": "line 6: expected id (at '1')"
+  },
+  {
+   "round": 2,
+   "src": "protocol LogkitUpgrade {\n  roles User, Lead, Researcher, Web, Coder, Sandbox, CI, Repo;\n  User -> Lead : Task(str) where len <= 2000;\n  Lead -> Researcher : Query(enum{httpclient, jsonfast, yamlite, logkit});\n  call Researcher -> Web : Get(enum{httpclient, jsonfast, yamlite, logkit}) returns str;\n  Researcher -> Lead : Answer({version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Lead -> Coder : Spec({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Apply({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Run(enum{unit, integration, lint, typecheck});\n  Sandbox -> Coder : Output(str);\n  Coder -> CI : Submit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  choice at CI {\n    CI -> Coder : Pass(unit);\n    Coder -> Repo : Commit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}, message: str});\n    Repo -> Coder : Committed(str);\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  } or {\n    CI -> Coder : Fail(enum{wrong_package, wrong_version, wrong_api, malformed});\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+   "stage": "checked",
+   "admitted": false,
+   "failed": [
+    "catalog"
+   ],
+   "noStuck": true,
+   "completion": true,
+   "states": 18
+  },
+  {
+   "round": 3,
+   "src": "protocol LogkitUpgrade {\n  roles User, Lead, Researcher, Web, Coder, Sandbox, CI, Repo;\n  User -> Lead : Task(str) where len <= 2000;\n  Lead -> Researcher : Query(enum{httpclient, jsonfast, yamlite, logkit});\n  Researcher -> Web : Get(enum{httpclient, jsonfast, yamlite, logkit});\n  Web -> Researcher : Page(str);\n  Researcher -> Lead : Answer({version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Lead -> Coder : Spec({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Apply({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  Coder -> Sandbox : Run(enum{unit, integration, lint, typecheck});\n  Sandbox -> Coder : Output(str);\n  Coder -> CI : Submit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}});\n  choice at CI {\n    CI -> Coder : Pass(unit);\n    Coder -> Repo : Commit({pkg: enum{httpclient, jsonfast, yamlite, logkit}, version: enum{\"1.4\", \"2.0\", \"2.1\", \"3.0\", \"3.2\", \"4.0\", \"5.1\", none}, api: enum{fetch, request, loads, parse, load, safe_load, log, emit}, message: str});\n    Repo -> Coder : Committed(str);\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  } or {\n    CI -> Coder : Fail(enum{wrong_package, wrong_version, wrong_api, malformed});\n    Coder -> Lead : Done(enum{committed, failed});\n    Lead -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 18
+  }
+ ],
+ "n_rounds": 3,
+ "seconds": 27.324239253997803,
+ "usd": 0.070878
+}

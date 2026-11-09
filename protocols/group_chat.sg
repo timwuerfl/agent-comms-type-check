@@ -1,0 +1,16 @@
+// AutoGen-style group chat: a manager selects the next speaker each round (bounded).
+protocol GroupChat {
+  roles User, Manager, Coder, Reviewer, Tester;
+  User -> Manager : Topic(str);
+  rec Turn max 6 {
+    choice at Manager {
+      Manager -> Coder : YourTurn(str); Coder -> Manager : Say(str); continue Turn;
+    } or {
+      Manager -> Reviewer : YourTurn(str); Reviewer -> Manager : Say(str); continue Turn;
+    } or {
+      Manager -> Tester : YourTurn(str); Tester -> Manager : Say(str); continue Turn;
+    } or {
+      Manager -> User : Summary(str);
+    }
+  }
+}

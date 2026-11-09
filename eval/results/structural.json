@@ -1,0 +1,3505 @@
+{
+ "attempts": {
+  "wrong_recipient": 4501,
+  "out_of_order": 4966,
+  "impersonation": 4595,
+  "choice_hijack": 4583,
+  "ill_typed": 4595,
+  "refinement_violation": 704,
+  "replay": 4206,
+  "runaway": 411
+ },
+ "accepted": {
+  "none": {
+   "wrong_recipient": 4501,
+   "out_of_order": 4966,
+   "impersonation": 4595,
+   "choice_hijack": 4583,
+   "ill_typed": 4595,
+   "refinement_violation": 704,
+   "replay": 4206,
+   "runaway": 411
+  },
+  "schema": {
+   "wrong_recipient": 4496,
+   "out_of_order": 4966,
+   "impersonation": 4593,
+   "choice_hijack": 4581,
+   "replay": 4206,
+   "runaway": 411
+  },
+  "topology": {
+   "out_of_order": 4966,
+   "replay": 4206,
+   "runaway": 411,
+   "wrong_recipient": 241,
+   "choice_hijack": 184
+  },
+  "session": {},
+  "session-lean": {}
+ },
+ "honest_delivered": {
+  "none": [
+   99685,
+   99685
+  ],
+  "schema": [
+   99685,
+   99685
+  ],
+  "topology": [
+   99685,
+   99685
+  ],
+  "session": [
+   99685,
+   99685
+  ],
+  "session-lean": [
+   99685,
+   99685
+  ]
+ },
+ "per_protocol": {
+  "ApprovalGate": {
+   "none": {
+    "wrong_recipient": [
+     208,
+     208
+    ],
+    "out_of_order": [
+     248,
+     248
+    ],
+    "impersonation": [
+     208,
+     208
+    ],
+    "choice_hijack": [
+     208,
+     208
+    ],
+    "ill_typed": [
+     208,
+     208
+    ],
+    "refinement_violation": [
+     95,
+     95
+    ],
+    "replay": [
+     208,
+     208
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     208,
+     208
+    ],
+    "out_of_order": [
+     248,
+     248
+    ],
+    "impersonation": [
+     208,
+     208
+    ],
+    "choice_hijack": [
+     208,
+     208
+    ],
+    "ill_typed": [
+     0,
+     208
+    ],
+    "refinement_violation": [
+     0,
+     95
+    ],
+    "replay": [
+     208,
+     208
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     208
+    ],
+    "out_of_order": [
+     248,
+     248
+    ],
+    "impersonation": [
+     0,
+     208
+    ],
+    "choice_hijack": [
+     0,
+     208
+    ],
+    "ill_typed": [
+     0,
+     208
+    ],
+    "refinement_violation": [
+     0,
+     95
+    ],
+    "replay": [
+     208,
+     208
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     208
+    ],
+    "out_of_order": [
+     0,
+     248
+    ],
+    "impersonation": [
+     0,
+     208
+    ],
+    "choice_hijack": [
+     0,
+     208
+    ],
+    "ill_typed": [
+     0,
+     208
+    ],
+    "refinement_violation": [
+     0,
+     95
+    ],
+    "replay": [
+     0,
+     208
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     208
+    ],
+    "out_of_order": [
+     0,
+     248
+    ],
+    "impersonation": [
+     0,
+     208
+    ],
+    "choice_hijack": [
+     0,
+     208
+    ],
+    "ill_typed": [
+     0,
+     208
+    ],
+    "refinement_violation": [
+     0,
+     95
+    ],
+    "replay": [
+     0,
+     208
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "CriticReviser": {
+   "none": {
+    "wrong_recipient": [
+     218,
+     218
+    ],
+    "out_of_order": [
+     218,
+     218
+    ],
+    "impersonation": [
+     218,
+     218
+    ],
+    "choice_hijack": [
+     218,
+     218
+    ],
+    "ill_typed": [
+     218,
+     218
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     178,
+     178
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     218,
+     218
+    ],
+    "out_of_order": [
+     218,
+     218
+    ],
+    "impersonation": [
+     218,
+     218
+    ],
+    "choice_hijack": [
+     218,
+     218
+    ],
+    "ill_typed": [
+     0,
+     218
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     178,
+     178
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     218
+    ],
+    "out_of_order": [
+     218,
+     218
+    ],
+    "impersonation": [
+     0,
+     218
+    ],
+    "choice_hijack": [
+     0,
+     218
+    ],
+    "ill_typed": [
+     0,
+     218
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     178,
+     178
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     218
+    ],
+    "out_of_order": [
+     0,
+     218
+    ],
+    "impersonation": [
+     0,
+     218
+    ],
+    "choice_hijack": [
+     0,
+     218
+    ],
+    "ill_typed": [
+     0,
+     218
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     178
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     218
+    ],
+    "out_of_order": [
+     0,
+     218
+    ],
+    "impersonation": [
+     0,
+     218
+    ],
+    "choice_hijack": [
+     0,
+     218
+    ],
+    "ill_typed": [
+     0,
+     218
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     178
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  },
+  "Debate": {
+   "none": {
+    "wrong_recipient": [
+     200,
+     200
+    ],
+    "out_of_order": [
+     200,
+     200
+    ],
+    "impersonation": [
+     200,
+     200
+    ],
+    "choice_hijack": [
+     200,
+     200
+    ],
+    "ill_typed": [
+     200,
+     200
+    ],
+    "refinement_violation": [
+     80,
+     80
+    ],
+    "replay": [
+     160,
+     160
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     200,
+     200
+    ],
+    "out_of_order": [
+     200,
+     200
+    ],
+    "impersonation": [
+     200,
+     200
+    ],
+    "choice_hijack": [
+     200,
+     200
+    ],
+    "ill_typed": [
+     0,
+     200
+    ],
+    "refinement_violation": [
+     0,
+     80
+    ],
+    "replay": [
+     160,
+     160
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     41,
+     200
+    ],
+    "out_of_order": [
+     200,
+     200
+    ],
+    "impersonation": [
+     0,
+     200
+    ],
+    "choice_hijack": [
+     0,
+     200
+    ],
+    "ill_typed": [
+     0,
+     200
+    ],
+    "refinement_violation": [
+     0,
+     80
+    ],
+    "replay": [
+     160,
+     160
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     200
+    ],
+    "out_of_order": [
+     0,
+     200
+    ],
+    "impersonation": [
+     0,
+     200
+    ],
+    "choice_hijack": [
+     0,
+     200
+    ],
+    "ill_typed": [
+     0,
+     200
+    ],
+    "refinement_violation": [
+     0,
+     80
+    ],
+    "replay": [
+     0,
+     160
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     200
+    ],
+    "out_of_order": [
+     0,
+     200
+    ],
+    "impersonation": [
+     0,
+     200
+    ],
+    "choice_hijack": [
+     0,
+     200
+    ],
+    "ill_typed": [
+     0,
+     200
+    ],
+    "refinement_violation": [
+     0,
+     80
+    ],
+    "replay": [
+     0,
+     160
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  },
+  "DualLLM": {
+   "none": {
+    "wrong_recipient": [
+     364,
+     364
+    ],
+    "out_of_order": [
+     364,
+     364
+    ],
+    "impersonation": [
+     364,
+     364
+    ],
+    "choice_hijack": [
+     364,
+     364
+    ],
+    "ill_typed": [
+     364,
+     364
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     324,
+     324
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     364,
+     364
+    ],
+    "out_of_order": [
+     364,
+     364
+    ],
+    "impersonation": [
+     364,
+     364
+    ],
+    "choice_hijack": [
+     364,
+     364
+    ],
+    "ill_typed": [
+     0,
+     364
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     324,
+     324
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     364
+    ],
+    "out_of_order": [
+     364,
+     364
+    ],
+    "impersonation": [
+     0,
+     364
+    ],
+    "choice_hijack": [
+     0,
+     364
+    ],
+    "ill_typed": [
+     0,
+     364
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     324,
+     324
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     364
+    ],
+    "out_of_order": [
+     0,
+     364
+    ],
+    "impersonation": [
+     0,
+     364
+    ],
+    "choice_hijack": [
+     0,
+     364
+    ],
+    "ill_typed": [
+     0,
+     364
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     324
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     364
+    ],
+    "out_of_order": [
+     0,
+     364
+    ],
+    "impersonation": [
+     0,
+     364
+    ],
+    "choice_hijack": [
+     0,
+     364
+    ],
+    "ill_typed": [
+     0,
+     364
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     324
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  },
+  "EmailAssistantNaive": {
+   "none": {
+    "wrong_recipient": [
+     198,
+     198
+    ],
+    "out_of_order": [
+     238,
+     238
+    ],
+    "impersonation": [
+     198,
+     198
+    ],
+    "choice_hijack": [
+     198,
+     198
+    ],
+    "ill_typed": [
+     198,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     198,
+     198
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     198,
+     198
+    ],
+    "out_of_order": [
+     238,
+     238
+    ],
+    "impersonation": [
+     198,
+     198
+    ],
+    "choice_hijack": [
+     198,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     198,
+     198
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     238,
+     238
+    ],
+    "impersonation": [
+     0,
+     198
+    ],
+    "choice_hijack": [
+     0,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     198,
+     198
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     0,
+     238
+    ],
+    "impersonation": [
+     0,
+     198
+    ],
+    "choice_hijack": [
+     0,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     198
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     0,
+     238
+    ],
+    "impersonation": [
+     0,
+     198
+    ],
+    "choice_hijack": [
+     0,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     198
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "EmailAssistantConfirm": {
+   "none": {
+    "wrong_recipient": [
+     210,
+     210
+    ],
+    "out_of_order": [
+     228,
+     228
+    ],
+    "impersonation": [
+     210,
+     210
+    ],
+    "choice_hijack": [
+     210,
+     210
+    ],
+    "ill_typed": [
+     210,
+     210
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     188,
+     188
+    ],
+    "runaway": [
+     18,
+     18
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     210,
+     210
+    ],
+    "out_of_order": [
+     228,
+     228
+    ],
+    "impersonation": [
+     210,
+     210
+    ],
+    "choice_hijack": [
+     210,
+     210
+    ],
+    "ill_typed": [
+     0,
+     210
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     188,
+     188
+    ],
+    "runaway": [
+     18,
+     18
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     210
+    ],
+    "out_of_order": [
+     228,
+     228
+    ],
+    "impersonation": [
+     0,
+     210
+    ],
+    "choice_hijack": [
+     0,
+     210
+    ],
+    "ill_typed": [
+     0,
+     210
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     188,
+     188
+    ],
+    "runaway": [
+     18,
+     18
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     210
+    ],
+    "out_of_order": [
+     0,
+     228
+    ],
+    "impersonation": [
+     0,
+     210
+    ],
+    "choice_hijack": [
+     0,
+     210
+    ],
+    "ill_typed": [
+     0,
+     210
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     188
+    ],
+    "runaway": [
+     0,
+     18
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     210
+    ],
+    "out_of_order": [
+     0,
+     228
+    ],
+    "impersonation": [
+     0,
+     210
+    ],
+    "choice_hijack": [
+     0,
+     210
+    ],
+    "ill_typed": [
+     0,
+     210
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     188
+    ],
+    "runaway": [
+     0,
+     18
+    ]
+   }
+  },
+  "GroupChat": {
+   "none": {
+    "wrong_recipient": [
+     198,
+     198
+    ],
+    "out_of_order": [
+     284,
+     284
+    ],
+    "impersonation": [
+     244,
+     244
+    ],
+    "choice_hijack": [
+     244,
+     244
+    ],
+    "ill_typed": [
+     244,
+     244
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     244,
+     244
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     198,
+     198
+    ],
+    "out_of_order": [
+     284,
+     284
+    ],
+    "impersonation": [
+     244,
+     244
+    ],
+    "choice_hijack": [
+     244,
+     244
+    ],
+    "ill_typed": [
+     0,
+     244
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     244,
+     244
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     284,
+     284
+    ],
+    "impersonation": [
+     0,
+     244
+    ],
+    "choice_hijack": [
+     53,
+     244
+    ],
+    "ill_typed": [
+     0,
+     244
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     244,
+     244
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     0,
+     284
+    ],
+    "impersonation": [
+     0,
+     244
+    ],
+    "choice_hijack": [
+     0,
+     244
+    ],
+    "ill_typed": [
+     0,
+     244
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     244
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     0,
+     284
+    ],
+    "impersonation": [
+     0,
+     244
+    ],
+    "choice_hijack": [
+     0,
+     244
+    ],
+    "ill_typed": [
+     0,
+     244
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     244
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "Handoff": {
+   "none": {
+    "wrong_recipient": [
+     114,
+     114
+    ],
+    "out_of_order": [
+     169,
+     169
+    ],
+    "impersonation": [
+     130,
+     130
+    ],
+    "choice_hijack": [
+     130,
+     130
+    ],
+    "ill_typed": [
+     130,
+     130
+    ],
+    "refinement_violation": [
+     16,
+     16
+    ],
+    "replay": [
+     129,
+     129
+    ],
+    "runaway": [
+     39,
+     39
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     114,
+     114
+    ],
+    "out_of_order": [
+     169,
+     169
+    ],
+    "impersonation": [
+     130,
+     130
+    ],
+    "choice_hijack": [
+     129,
+     130
+    ],
+    "ill_typed": [
+     0,
+     130
+    ],
+    "refinement_violation": [
+     0,
+     16
+    ],
+    "replay": [
+     129,
+     129
+    ],
+    "runaway": [
+     39,
+     39
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     114
+    ],
+    "out_of_order": [
+     169,
+     169
+    ],
+    "impersonation": [
+     0,
+     130
+    ],
+    "choice_hijack": [
+     17,
+     130
+    ],
+    "ill_typed": [
+     0,
+     130
+    ],
+    "refinement_violation": [
+     0,
+     16
+    ],
+    "replay": [
+     129,
+     129
+    ],
+    "runaway": [
+     39,
+     39
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     114
+    ],
+    "out_of_order": [
+     0,
+     169
+    ],
+    "impersonation": [
+     0,
+     130
+    ],
+    "choice_hijack": [
+     0,
+     130
+    ],
+    "ill_typed": [
+     0,
+     130
+    ],
+    "refinement_violation": [
+     0,
+     16
+    ],
+    "replay": [
+     0,
+     129
+    ],
+    "runaway": [
+     0,
+     39
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     114
+    ],
+    "out_of_order": [
+     0,
+     169
+    ],
+    "impersonation": [
+     0,
+     130
+    ],
+    "choice_hijack": [
+     0,
+     130
+    ],
+    "ill_typed": [
+     0,
+     130
+    ],
+    "refinement_violation": [
+     0,
+     16
+    ],
+    "replay": [
+     0,
+     129
+    ],
+    "runaway": [
+     0,
+     39
+    ]
+   }
+  },
+  "NaiveResearch": {
+   "none": {
+    "wrong_recipient": [
+     280,
+     280
+    ],
+    "out_of_order": [
+     320,
+     320
+    ],
+    "impersonation": [
+     280,
+     280
+    ],
+    "choice_hijack": [
+     280,
+     280
+    ],
+    "ill_typed": [
+     280,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     280,
+     280
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     280,
+     280
+    ],
+    "out_of_order": [
+     320,
+     320
+    ],
+    "impersonation": [
+     280,
+     280
+    ],
+    "choice_hijack": [
+     280,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     280,
+     280
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     280
+    ],
+    "out_of_order": [
+     320,
+     320
+    ],
+    "impersonation": [
+     0,
+     280
+    ],
+    "choice_hijack": [
+     0,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     280,
+     280
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     280
+    ],
+    "out_of_order": [
+     0,
+     320
+    ],
+    "impersonation": [
+     0,
+     280
+    ],
+    "choice_hijack": [
+     0,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     280
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     280
+    ],
+    "out_of_order": [
+     0,
+     320
+    ],
+    "impersonation": [
+     0,
+     280
+    ],
+    "choice_hijack": [
+     0,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     280
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "OpsHardened": {
+   "none": {
+    "wrong_recipient": [
+     439,
+     439
+    ],
+    "out_of_order": [
+     458,
+     458
+    ],
+    "impersonation": [
+     439,
+     439
+    ],
+    "choice_hijack": [
+     439,
+     439
+    ],
+    "ill_typed": [
+     439,
+     439
+    ],
+    "refinement_violation": [
+     40,
+     40
+    ],
+    "replay": [
+     418,
+     418
+    ],
+    "runaway": [
+     19,
+     19
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     439,
+     439
+    ],
+    "out_of_order": [
+     458,
+     458
+    ],
+    "impersonation": [
+     439,
+     439
+    ],
+    "choice_hijack": [
+     439,
+     439
+    ],
+    "ill_typed": [
+     0,
+     439
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     418,
+     418
+    ],
+    "runaway": [
+     19,
+     19
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     439
+    ],
+    "out_of_order": [
+     458,
+     458
+    ],
+    "impersonation": [
+     0,
+     439
+    ],
+    "choice_hijack": [
+     0,
+     439
+    ],
+    "ill_typed": [
+     0,
+     439
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     418,
+     418
+    ],
+    "runaway": [
+     19,
+     19
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     439
+    ],
+    "out_of_order": [
+     0,
+     458
+    ],
+    "impersonation": [
+     0,
+     439
+    ],
+    "choice_hijack": [
+     0,
+     439
+    ],
+    "ill_typed": [
+     0,
+     439
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     0,
+     418
+    ],
+    "runaway": [
+     0,
+     19
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     439
+    ],
+    "out_of_order": [
+     0,
+     458
+    ],
+    "impersonation": [
+     0,
+     439
+    ],
+    "choice_hijack": [
+     0,
+     439
+    ],
+    "ill_typed": [
+     0,
+     439
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     0,
+     418
+    ],
+    "runaway": [
+     0,
+     19
+    ]
+   }
+  },
+  "OpsNaive": {
+   "none": {
+    "wrong_recipient": [
+     431,
+     431
+    ],
+    "out_of_order": [
+     446,
+     446
+    ],
+    "impersonation": [
+     431,
+     431
+    ],
+    "choice_hijack": [
+     431,
+     431
+    ],
+    "ill_typed": [
+     431,
+     431
+    ],
+    "refinement_violation": [
+     257,
+     257
+    ],
+    "replay": [
+     406,
+     406
+    ],
+    "runaway": [
+     15,
+     15
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     431,
+     431
+    ],
+    "out_of_order": [
+     446,
+     446
+    ],
+    "impersonation": [
+     431,
+     431
+    ],
+    "choice_hijack": [
+     431,
+     431
+    ],
+    "ill_typed": [
+     0,
+     431
+    ],
+    "refinement_violation": [
+     0,
+     257
+    ],
+    "replay": [
+     406,
+     406
+    ],
+    "runaway": [
+     15,
+     15
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     431
+    ],
+    "out_of_order": [
+     446,
+     446
+    ],
+    "impersonation": [
+     0,
+     431
+    ],
+    "choice_hijack": [
+     0,
+     431
+    ],
+    "ill_typed": [
+     0,
+     431
+    ],
+    "refinement_violation": [
+     0,
+     257
+    ],
+    "replay": [
+     406,
+     406
+    ],
+    "runaway": [
+     15,
+     15
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     431
+    ],
+    "out_of_order": [
+     0,
+     446
+    ],
+    "impersonation": [
+     0,
+     431
+    ],
+    "choice_hijack": [
+     0,
+     431
+    ],
+    "ill_typed": [
+     0,
+     431
+    ],
+    "refinement_violation": [
+     0,
+     257
+    ],
+    "replay": [
+     0,
+     406
+    ],
+    "runaway": [
+     0,
+     15
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     431
+    ],
+    "out_of_order": [
+     0,
+     446
+    ],
+    "impersonation": [
+     0,
+     431
+    ],
+    "choice_hijack": [
+     0,
+     431
+    ],
+    "ill_typed": [
+     0,
+     431
+    ],
+    "refinement_violation": [
+     0,
+     257
+    ],
+    "replay": [
+     0,
+     406
+    ],
+    "runaway": [
+     0,
+     15
+    ]
+   }
+  },
+  "Payments": {
+   "none": {
+    "wrong_recipient": [
+     117,
+     117
+    ],
+    "out_of_order": [
+     117,
+     117
+    ],
+    "impersonation": [
+     117,
+     117
+    ],
+    "choice_hijack": [
+     117,
+     117
+    ],
+    "ill_typed": [
+     117,
+     117
+    ],
+    "refinement_violation": [
+     40,
+     40
+    ],
+    "replay": [
+     77,
+     77
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     114,
+     117
+    ],
+    "out_of_order": [
+     117,
+     117
+    ],
+    "impersonation": [
+     116,
+     117
+    ],
+    "choice_hijack": [
+     117,
+     117
+    ],
+    "ill_typed": [
+     0,
+     117
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     77,
+     77
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     9,
+     117
+    ],
+    "out_of_order": [
+     117,
+     117
+    ],
+    "impersonation": [
+     0,
+     117
+    ],
+    "choice_hijack": [
+     0,
+     117
+    ],
+    "ill_typed": [
+     0,
+     117
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     77,
+     77
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     117
+    ],
+    "out_of_order": [
+     0,
+     117
+    ],
+    "impersonation": [
+     0,
+     117
+    ],
+    "choice_hijack": [
+     0,
+     117
+    ],
+    "ill_typed": [
+     0,
+     117
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     0,
+     77
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     117
+    ],
+    "out_of_order": [
+     0,
+     117
+    ],
+    "impersonation": [
+     0,
+     117
+    ],
+    "choice_hijack": [
+     0,
+     117
+    ],
+    "ill_typed": [
+     0,
+     117
+    ],
+    "refinement_violation": [
+     0,
+     40
+    ],
+    "replay": [
+     0,
+     77
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  },
+  "PlanThenExecute": {
+   "none": {
+    "wrong_recipient": [
+     320,
+     320
+    ],
+    "out_of_order": [
+     360,
+     360
+    ],
+    "impersonation": [
+     320,
+     320
+    ],
+    "choice_hijack": [
+     320,
+     320
+    ],
+    "ill_typed": [
+     320,
+     320
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     320,
+     320
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     320,
+     320
+    ],
+    "out_of_order": [
+     360,
+     360
+    ],
+    "impersonation": [
+     320,
+     320
+    ],
+    "choice_hijack": [
+     320,
+     320
+    ],
+    "ill_typed": [
+     0,
+     320
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     320,
+     320
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     320
+    ],
+    "out_of_order": [
+     360,
+     360
+    ],
+    "impersonation": [
+     0,
+     320
+    ],
+    "choice_hijack": [
+     0,
+     320
+    ],
+    "ill_typed": [
+     0,
+     320
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     320,
+     320
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     320
+    ],
+    "out_of_order": [
+     0,
+     360
+    ],
+    "impersonation": [
+     0,
+     320
+    ],
+    "choice_hijack": [
+     0,
+     320
+    ],
+    "ill_typed": [
+     0,
+     320
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     320
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     320
+    ],
+    "out_of_order": [
+     0,
+     360
+    ],
+    "impersonation": [
+     0,
+     320
+    ],
+    "choice_hijack": [
+     0,
+     320
+    ],
+    "ill_typed": [
+     0,
+     320
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     320
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "PlanThenExecuteLLM": {
+   "none": {
+    "wrong_recipient": [
+     280,
+     280
+    ],
+    "out_of_order": [
+     320,
+     320
+    ],
+    "impersonation": [
+     280,
+     280
+    ],
+    "choice_hijack": [
+     280,
+     280
+    ],
+    "ill_typed": [
+     280,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     280,
+     280
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     280,
+     280
+    ],
+    "out_of_order": [
+     320,
+     320
+    ],
+    "impersonation": [
+     280,
+     280
+    ],
+    "choice_hijack": [
+     280,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     280,
+     280
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     280
+    ],
+    "out_of_order": [
+     320,
+     320
+    ],
+    "impersonation": [
+     0,
+     280
+    ],
+    "choice_hijack": [
+     0,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     280,
+     280
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     280
+    ],
+    "out_of_order": [
+     0,
+     320
+    ],
+    "impersonation": [
+     0,
+     280
+    ],
+    "choice_hijack": [
+     0,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     280
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     280
+    ],
+    "out_of_order": [
+     0,
+     320
+    ],
+    "impersonation": [
+     0,
+     280
+    ],
+    "choice_hijack": [
+     0,
+     280
+    ],
+    "ill_typed": [
+     0,
+     280
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     280
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "Procurement": {
+   "none": {
+    "wrong_recipient": [
+     118,
+     118
+    ],
+    "out_of_order": [
+     118,
+     118
+    ],
+    "impersonation": [
+     118,
+     118
+    ],
+    "choice_hijack": [
+     118,
+     118
+    ],
+    "ill_typed": [
+     118,
+     118
+    ],
+    "refinement_violation": [
+     79,
+     79
+    ],
+    "replay": [
+     78,
+     78
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     116,
+     118
+    ],
+    "out_of_order": [
+     118,
+     118
+    ],
+    "impersonation": [
+     117,
+     118
+    ],
+    "choice_hijack": [
+     117,
+     118
+    ],
+    "ill_typed": [
+     0,
+     118
+    ],
+    "refinement_violation": [
+     0,
+     79
+    ],
+    "replay": [
+     78,
+     78
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     118
+    ],
+    "out_of_order": [
+     118,
+     118
+    ],
+    "impersonation": [
+     0,
+     118
+    ],
+    "choice_hijack": [
+     0,
+     118
+    ],
+    "ill_typed": [
+     0,
+     118
+    ],
+    "refinement_violation": [
+     0,
+     79
+    ],
+    "replay": [
+     78,
+     78
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     118
+    ],
+    "out_of_order": [
+     0,
+     118
+    ],
+    "impersonation": [
+     0,
+     118
+    ],
+    "choice_hijack": [
+     0,
+     118
+    ],
+    "ill_typed": [
+     0,
+     118
+    ],
+    "refinement_violation": [
+     0,
+     79
+    ],
+    "replay": [
+     0,
+     78
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     118
+    ],
+    "out_of_order": [
+     0,
+     118
+    ],
+    "impersonation": [
+     0,
+     118
+    ],
+    "choice_hijack": [
+     0,
+     118
+    ],
+    "ill_typed": [
+     0,
+     118
+    ],
+    "refinement_violation": [
+     0,
+     79
+    ],
+    "replay": [
+     0,
+     78
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  },
+  "ReActTools": {
+   "none": {
+    "wrong_recipient": [
+     198,
+     198
+    ],
+    "out_of_order": [
+     238,
+     238
+    ],
+    "impersonation": [
+     198,
+     198
+    ],
+    "choice_hijack": [
+     198,
+     198
+    ],
+    "ill_typed": [
+     198,
+     198
+    ],
+    "refinement_violation": [
+     97,
+     97
+    ],
+    "replay": [
+     198,
+     198
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     198,
+     198
+    ],
+    "out_of_order": [
+     238,
+     238
+    ],
+    "impersonation": [
+     198,
+     198
+    ],
+    "choice_hijack": [
+     198,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     97
+    ],
+    "replay": [
+     198,
+     198
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     238,
+     238
+    ],
+    "impersonation": [
+     0,
+     198
+    ],
+    "choice_hijack": [
+     0,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     97
+    ],
+    "replay": [
+     198,
+     198
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     0,
+     238
+    ],
+    "impersonation": [
+     0,
+     198
+    ],
+    "choice_hijack": [
+     0,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     97
+    ],
+    "replay": [
+     0,
+     198
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     198
+    ],
+    "out_of_order": [
+     0,
+     238
+    ],
+    "impersonation": [
+     0,
+     198
+    ],
+    "choice_hijack": [
+     0,
+     198
+    ],
+    "ill_typed": [
+     0,
+     198
+    ],
+    "refinement_violation": [
+     0,
+     97
+    ],
+    "replay": [
+     0,
+     198
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "SupervisorWorkers": {
+   "none": {
+    "wrong_recipient": [
+     328,
+     328
+    ],
+    "out_of_order": [
+     400,
+     400
+    ],
+    "impersonation": [
+     360,
+     360
+    ],
+    "choice_hijack": [
+     348,
+     348
+    ],
+    "ill_typed": [
+     360,
+     360
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     360,
+     360
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     328,
+     328
+    ],
+    "out_of_order": [
+     400,
+     400
+    ],
+    "impersonation": [
+     360,
+     360
+    ],
+    "choice_hijack": [
+     348,
+     348
+    ],
+    "ill_typed": [
+     0,
+     360
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     360,
+     360
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     31,
+     328
+    ],
+    "out_of_order": [
+     400,
+     400
+    ],
+    "impersonation": [
+     0,
+     360
+    ],
+    "choice_hijack": [
+     34,
+     348
+    ],
+    "ill_typed": [
+     0,
+     360
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     360,
+     360
+    ],
+    "runaway": [
+     40,
+     40
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     328
+    ],
+    "out_of_order": [
+     0,
+     400
+    ],
+    "impersonation": [
+     0,
+     360
+    ],
+    "choice_hijack": [
+     0,
+     348
+    ],
+    "ill_typed": [
+     0,
+     360
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     360
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     328
+    ],
+    "out_of_order": [
+     0,
+     400
+    ],
+    "impersonation": [
+     0,
+     360
+    ],
+    "choice_hijack": [
+     0,
+     348
+    ],
+    "ill_typed": [
+     0,
+     360
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     360
+    ],
+    "runaway": [
+     0,
+     40
+    ]
+   }
+  },
+  "TwoPhaseCommit": {
+   "none": {
+    "wrong_recipient": [
+     120,
+     120
+    ],
+    "out_of_order": [
+     120,
+     120
+    ],
+    "impersonation": [
+     120,
+     120
+    ],
+    "choice_hijack": [
+     120,
+     120
+    ],
+    "ill_typed": [
+     120,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     80,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     120,
+     120
+    ],
+    "out_of_order": [
+     120,
+     120
+    ],
+    "impersonation": [
+     120,
+     120
+    ],
+    "choice_hijack": [
+     120,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     80,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     80,
+     120
+    ],
+    "out_of_order": [
+     120,
+     120
+    ],
+    "impersonation": [
+     0,
+     120
+    ],
+    "choice_hijack": [
+     40,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     80,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     120
+    ],
+    "out_of_order": [
+     0,
+     120
+    ],
+    "impersonation": [
+     0,
+     120
+    ],
+    "choice_hijack": [
+     0,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     120
+    ],
+    "out_of_order": [
+     0,
+     120
+    ],
+    "impersonation": [
+     0,
+     120
+    ],
+    "choice_hijack": [
+     0,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  },
+  "TwoPhaseCommitBuggy": {
+   "none": {
+    "wrong_recipient": [
+     120,
+     120
+    ],
+    "out_of_order": [
+     120,
+     120
+    ],
+    "impersonation": [
+     120,
+     120
+    ],
+    "choice_hijack": [
+     120,
+     120
+    ],
+    "ill_typed": [
+     120,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     80,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     120,
+     120
+    ],
+    "out_of_order": [
+     120,
+     120
+    ],
+    "impersonation": [
+     120,
+     120
+    ],
+    "choice_hijack": [
+     120,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     80,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     80,
+     120
+    ],
+    "out_of_order": [
+     120,
+     120
+    ],
+    "impersonation": [
+     0,
+     120
+    ],
+    "choice_hijack": [
+     40,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     80,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     120
+    ],
+    "out_of_order": [
+     0,
+     120
+    ],
+    "impersonation": [
+     0,
+     120
+    ],
+    "choice_hijack": [
+     0,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     120
+    ],
+    "out_of_order": [
+     0,
+     120
+    ],
+    "impersonation": [
+     0,
+     120
+    ],
+    "choice_hijack": [
+     0,
+     120
+    ],
+    "ill_typed": [
+     0,
+     120
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     80
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  },
+  "Unrealizable": {
+   "none": {
+    "wrong_recipient": [
+     40,
+     40
+    ],
+    "out_of_order": [
+     0,
+     0
+    ],
+    "impersonation": [
+     40,
+     40
+    ],
+    "choice_hijack": [
+     40,
+     40
+    ],
+    "ill_typed": [
+     40,
+     40
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     0
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "schema": {
+    "wrong_recipient": [
+     40,
+     40
+    ],
+    "out_of_order": [
+     0,
+     0
+    ],
+    "impersonation": [
+     40,
+     40
+    ],
+    "choice_hijack": [
+     40,
+     40
+    ],
+    "ill_typed": [
+     0,
+     40
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     0
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "topology": {
+    "wrong_recipient": [
+     0,
+     40
+    ],
+    "out_of_order": [
+     0,
+     0
+    ],
+    "impersonation": [
+     0,
+     40
+    ],
+    "choice_hijack": [
+     0,
+     40
+    ],
+    "ill_typed": [
+     0,
+     40
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     0
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session": {
+    "wrong_recipient": [
+     0,
+     40
+    ],
+    "out_of_order": [
+     0,
+     0
+    ],
+    "impersonation": [
+     0,
+     40
+    ],
+    "choice_hijack": [
+     0,
+     40
+    ],
+    "ill_typed": [
+     0,
+     40
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     0
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   },
+   "session-lean": {
+    "wrong_recipient": [
+     0,
+     40
+    ],
+    "out_of_order": [
+     0,
+     0
+    ],
+    "impersonation": [
+     0,
+     40
+    ],
+    "choice_hijack": [
+     0,
+     40
+    ],
+    "ill_typed": [
+     0,
+     40
+    ],
+    "refinement_violation": [
+     0,
+     0
+    ],
+    "replay": [
+     0,
+     0
+    ],
+    "runaway": [
+     0,
+     0
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+// Writer / critic refinement loop (self-refine across two agents), bounded.
+protocol CriticReviser {
+  roles User, Writer, Critic;
+  User -> Writer : Brief(str);
+  rec Draft max 4 {
+    Writer -> Critic : Draft(str);
+    choice at Critic {
+      Critic -> Writer : Revise(str); continue Draft;
+    } or {
+      Critic -> Writer : Accept;
+    }
+  }
+  Writer -> User : Final(str);
+}

@@ -1,0 +1,22 @@
+// Willison's dual-LLM pattern: the privileged LLM never sees untrusted text; the quarantined LLM reads it
+// and returns only symbolic handles. A deterministic controller substitutes handles into the final output.
+protocol DualLLM {
+  roles User, Privileged, Controller, Quarantined, Inbox, Mailer;
+  untrusted Inbox;
+  endorser Controller;
+  sensitive Controller -> Mailer;
+  User -> Privileged : Request(str);
+  Privileged -> Controller : Plan({fetch: enum{latest_email, unread}, then: enum{summarize, classify}});
+  call Controller -> Inbox : read(enum{latest_email, unread}) returns str;
+  Controller -> Quarantined : Process({text: str, task: enum{summarize, classify}});
+  Quarantined -> Controller : Handle({var: enum{SUMMARY_1}, label: enum{work, personal, spam}});
+  Controller -> Privileged : Done({var: enum{SUMMARY_1}, label: enum{work, personal, spam}});
+  choice at Privileged {
+    Privileged -> Controller : Forward({to: enum{boss, me}, var: enum{SUMMARY_1}});
+    Controller -> Mailer : Send({to: enum{boss, me}, body: str});
+    Mailer -> Controller : Sent;
+  } or {
+    Privileged -> Controller : Discard;
+  }
+  Controller -> User : Reply(str);
+}

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swarmgate"
+version = "0.1.0"
+description = "Lean-verified session protocols as a reference monitor for multi-agent (LLM) communication"
+readme = "../README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = []
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+gateway = ["aiohttp>=3.9", "httpx>=0.27"]
+mcp = ["mcp>=1.2"]
+dev = ["pytest", "hypothesis"]
+
+[project.scripts]
+swarmgate-py = "swarmgate.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["swarmgate*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

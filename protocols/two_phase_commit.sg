@@ -1,0 +1,25 @@
+// Two-phase commit, fixed: the votes drive the choices, so a commit is only reachable after two Yes votes.
+protocol TwoPhaseCommit {
+  roles Coordinator, A, B;
+  Coordinator -> A : Prepare(str);
+  Coordinator -> B : Prepare(str);
+  choice at A {
+    A -> Coordinator : Yes;
+    choice at B {
+      B -> Coordinator : Yes;
+      choice at Coordinator {
+        Coordinator -> A : Commit; Coordinator -> B : Commit;
+      } or {
+        Coordinator -> A : Abort; Coordinator -> B : Abort;
+      }
+    } or {
+      B -> Coordinator : No;
+      Coordinator -> A : Abort; Coordinator -> B : Abort;
+    }
+  } or {
+    A -> Coordinator : No;
+    choice at B { B -> Coordinator : Yes; } or { B -> Coordinator : No; }
+    Coordinator -> A : Abort; Coordinator -> B : Abort;
+  }
+  property NoCommitAfterNo: Coordinator -> A : Commit implies not once (A -> Coordinator : No or B -> Coordinator : No);
+}

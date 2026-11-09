@@ -1,0 +1,16 @@
+// Cross-organisation procurement over A2A: buyer, seller and bank agents of three companies.
+// Decentralised enforcement (one sidecar per organisation) is verified sound.
+protocol Procurement {
+  roles Buyer, Seller, Bank;
+  Buyer -> Seller : RFQ({item: str, qty: int}) where qty >= 1 and qty <= 1000;
+  Seller -> Buyer : Quote({price: int}) where price >= 0;
+  choice at Buyer {
+    Buyer -> Seller : Accept;
+    Buyer -> Bank : Pay({to: enum{seller}, amount: int}) where amount >= 0;
+    Bank -> Seller : Settled({amount: int});
+    Seller -> Buyer : Shipped(str);
+  } or {
+    Buyer -> Seller : Decline;
+  }
+  property PayOnlyAfterQuote: Buyer -> Bank : Pay implies once Seller -> Buyer : Quote;
+}

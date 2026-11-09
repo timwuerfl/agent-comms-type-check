@@ -1,0 +1,12 @@
+// Plan-then-execute with an *LLM* executor (finding: IFC fails -- untrusted search results can still steer
+// the arguments of the pre-planned action).  Compare plan_then_execute.sg.
+protocol PlanThenExecuteLLM {
+  roles User, Planner, Executor, Search, Calendar;
+  untrusted Search;
+  sensitive Executor -> Calendar;
+  User -> Planner : Goal(str);
+  Planner -> Executor : Plan({query: str, book: enum{none, meeting_30, meeting_60}});
+  call Executor -> Search : search(str) returns str;
+  call Executor -> Calendar : book(enum{none, meeting_30, meeting_60}) returns bool;
+  Executor -> User : Answer(str);
+}

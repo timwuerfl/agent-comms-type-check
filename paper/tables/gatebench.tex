@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+& benign & inject & \multicolumn{3}{c}{one agent compromised} & taint\\
+\cmidrule(lr){4-6}
+defense & utility & ASR & reader & actor & all (95\% CI) & closure\\
+\midrule
+no gate (free bus) & 79 & 0 & 100 & 98 & 99 {\scriptsize(96--100)} & 100 \\
+topology ACL & 85 & 0 & 17 & 99 & 50 {\scriptsize(43--56)} & 100 \\
+SwarmGate, naive protocol & 86 & 0 & 9 & 78 & 36 {\scriptsize(30--43)} & 75 \\
+SwarmGate, hardened & 100 & 0 & 0 & 25 & 10 {\scriptsize(7--15)} & 0 \\
+LLM protocol, unverified & 82 & 0 & 0 & 12 & 5 {\scriptsize(3--9)} & 0 \\
+LLM protocol, Lean-admitted & 86 & 0 & 0 & 15 & 6 {\scriptsize(3--10)} & 0 \\
+\bottomrule
+\end{tabular}

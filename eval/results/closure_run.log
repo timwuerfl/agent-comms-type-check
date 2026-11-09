@@ -1,0 +1,101 @@
+[synth] ops/ops1/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops2/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops2/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops3/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops3/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] ops/ops4/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops4/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops5/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops5/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops6/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops6/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] ops/ops7/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] ops/ops7/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops8/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops8/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops9/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops9/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops10/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] ops/ops10/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em1/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em2/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em2/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em3/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em3/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em4/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em4/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em5/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em5/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em6/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em6/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em7/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em7/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em8/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em8/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em9/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em9/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em10/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em10/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin1/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin2/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin2/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin3/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin3/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] finance/fin4/unverified: ok=True admitted=False rounds=1 failed1=['ifc']
+[synth] finance/fin4/verified: ok=True admitted=True rounds=2 failed1=['catalog', 'ifc']
+[synth] finance/fin5/unverified: ok=True admitted=False rounds=2 failed1=['catalog', 'ifc']
+[synth] finance/fin5/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin6/unverified: ok=True admitted=False rounds=1 failed1=['ifc']
+[synth] finance/fin6/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin7/unverified: ok=True admitted=False rounds=1 failed1=['ifc']
+[synth] finance/fin7/verified: ok=True admitted=True rounds=2 failed1=['catalog', 'ifc']
+[synth] finance/fin8/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] finance/fin8/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin9/unverified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin9/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] finance/fin10/unverified: ok=True admitted=True rounds=1 failed1=[]
+[synth] finance/fin10/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] code/code1/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code1/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code2/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code2/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code3/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code3/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code4/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code4/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code5/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code5/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code6/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code6/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code7/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code7/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code8/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code8/verified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code9/unverified: ok=True admitted=True rounds=2 failed1=None
+[synth] code/code9/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code10/unverified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code10/verified: ok=True admitted=True rounds=3 failed1=None
+475 episodes to run (5 already done); spent so far $24.79
+  25/475 episodes, 1.0 min, run spent $0.06, total $24.86
+  50/475 episodes, 1.6 min, run spent $0.11, total $24.91
+  75/475 episodes, 2.2 min, run spent $0.16, total $24.95
+  100/475 episodes, 2.9 min, run spent $0.21, total $25.00
+  125/475 episodes, 3.3 min, run spent $0.23, total $25.03
+  150/475 episodes, 3.5 min, run spent $0.25, total $25.05
+  175/475 episodes, 3.9 min, run spent $0.27, total $25.09
+  200/475 episodes, 4.2 min, run spent $0.29, total $25.13
+  225/475 episodes, 4.5 min, run spent $0.32, total $25.17
+  250/475 episodes, 4.7 min, run spent $0.33, total $25.19
+  275/475 episodes, 4.9 min, run spent $0.35, total $25.23
+  300/475 episodes, 5.2 min, run spent $0.36, total $25.25
+  325/475 episodes, 5.4 min, run spent $0.38, total $25.28
+  350/475 episodes, 5.7 min, run spent $0.40, total $25.32
+  375/475 episodes, 6.2 min, run spent $0.44, total $25.41
+  400/475 episodes, 6.7 min, run spent $0.49, total $25.49
+  425/475 episodes, 7.2 min, run spent $0.52, total $25.56
+  450/475 episodes, 7.6 min, run spent $0.56, total $25.63
+  475/475 episodes, 8.2 min, run spent $0.61, total $25.73
+done. run spent $0.61; total $25.73

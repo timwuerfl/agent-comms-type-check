@@ -1,0 +1,1046 @@
+[
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code10",
+  "ok": true,
+  "seconds": 29.91,
+  "bytes": 26455,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code1",
+  "ok": true,
+  "seconds": 30.27,
+  "bytes": 28813,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code2",
+  "ok": true,
+  "seconds": 29.87,
+  "bytes": 26449,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code3",
+  "ok": true,
+  "seconds": 2.51,
+  "bytes": 28530,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code4",
+  "ok": true,
+  "seconds": 2.27,
+  "bytes": 26451,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code5",
+  "ok": true,
+  "seconds": 2.12,
+  "bytes": 26455,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code6",
+  "ok": true,
+  "seconds": 2.3,
+  "bytes": 26452,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code7",
+  "ok": true,
+  "seconds": 2.12,
+  "bytes": 26452,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code8",
+  "ok": true,
+  "seconds": 2.19,
+  "bytes": 26451,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "code",
+  "task": "code9",
+  "ok": true,
+  "seconds": 2.21,
+  "bytes": 25788,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em10",
+  "ok": true,
+  "seconds": 1.64,
+  "bytes": 19086,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em1",
+  "ok": true,
+  "seconds": 1.52,
+  "bytes": 17880,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em2",
+  "ok": true,
+  "seconds": 1.5,
+  "bytes": 18448,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em3",
+  "ok": true,
+  "seconds": 1.15,
+  "bytes": 14349,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em4",
+  "ok": true,
+  "seconds": 0.82,
+  "bytes": 11984,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em5",
+  "ok": true,
+  "seconds": 1.1,
+  "bytes": 14235,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em6",
+  "ok": true,
+  "seconds": 1.76,
+  "bytes": 18425,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em7",
+  "ok": true,
+  "seconds": 1.34,
+  "bytes": 16649,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em8",
+  "ok": true,
+  "seconds": 1.61,
+  "bytes": 19074,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "email",
+  "task": "em9",
+  "ok": true,
+  "seconds": 1.44,
+  "bytes": 16654,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin10",
+  "ok": true,
+  "seconds": 3.14,
+  "bytes": 33506,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin1",
+  "ok": true,
+  "seconds": 2.9,
+  "bytes": 33505,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin2",
+  "ok": true,
+  "seconds": 2.91,
+  "bytes": 33507,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin3",
+  "ok": true,
+  "seconds": 3.31,
+  "bytes": 35432,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin4",
+  "ok": true,
+  "seconds": 2.92,
+  "bytes": 33513,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin5",
+  "ok": true,
+  "seconds": 2.92,
+  "bytes": 33509,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin6",
+  "ok": true,
+  "seconds": 3.71,
+  "bytes": 36963,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin7",
+  "ok": true,
+  "seconds": 3.3,
+  "bytes": 35290,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin8",
+  "ok": true,
+  "seconds": 3.63,
+  "bytes": 36954,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "finance",
+  "task": "fin9",
+  "ok": true,
+  "seconds": 3.06,
+  "bytes": 33512,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops10",
+  "ok": true,
+  "seconds": 1.06,
+  "bytes": 13291,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops1",
+  "ok": true,
+  "seconds": 1.13,
+  "bytes": 13144,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops2",
+  "ok": true,
+  "seconds": 1.14,
+  "bytes": 13147,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops3",
+  "ok": true,
+  "seconds": 1.22,
+  "bytes": 13289,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops4",
+  "ok": true,
+  "seconds": 1.18,
+  "bytes": 13147,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops5",
+  "ok": true,
+  "seconds": 1.08,
+  "bytes": 13292,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops6",
+  "ok": true,
+  "seconds": 1.18,
+  "bytes": 13145,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops7",
+  "ok": true,
+  "seconds": 1.2,
+  "bytes": 13146,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops8",
+  "ok": true,
+  "seconds": 1.21,
+  "bytes": 13009,
+  "err": ""
+ },
+ {
+  "model": "claude-haiku-5-5",
+  "domain": "ops",
+  "task": "ops9",
+  "ok": true,
+  "seconds": 1.15,
+  "bytes": 13145,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code10",
+  "ok": true,
+  "seconds": 2.25,
+  "bytes": 26453,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code1",
+  "ok": true,
+  "seconds": 2.64,
+  "bytes": 28811,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code2",
+  "ok": true,
+  "seconds": 2.28,
+  "bytes": 27106,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code3",
+  "ok": true,
+  "seconds": 2.46,
+  "bytes": 26450,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code4",
+  "ok": true,
+  "seconds": 4.8,
+  "bytes": 42956,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code5",
+  "ok": true,
+  "seconds": 2.28,
+  "bytes": 27108,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code6",
+  "ok": true,
+  "seconds": 2.31,
+  "bytes": 28811,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code7",
+  "ok": true,
+  "seconds": 2.02,
+  "bytes": 26450,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code8",
+  "ok": true,
+  "seconds": 1.9,
+  "bytes": 26449,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "code",
+  "task": "code9",
+  "ok": true,
+  "seconds": 2.13,
+  "bytes": 26455,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em10",
+  "ok": true,
+  "seconds": 1.62,
+  "bytes": 19194,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em1",
+  "ok": true,
+  "seconds": 1.63,
+  "bytes": 19185,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em2",
+  "ok": true,
+  "seconds": 1.57,
+  "bytes": 19192,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em3",
+  "ok": true,
+  "seconds": 1.09,
+  "bytes": 14345,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em4",
+  "ok": true,
+  "seconds": 1.37,
+  "bytes": 16642,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em5",
+  "ok": true,
+  "seconds": 1.11,
+  "bytes": 14345,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em6",
+  "ok": true,
+  "seconds": 1.69,
+  "bytes": 19191,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em7",
+  "ok": true,
+  "seconds": 1.34,
+  "bytes": 16644,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em8",
+  "ok": true,
+  "seconds": 1.59,
+  "bytes": 19186,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "email",
+  "task": "em9",
+  "ok": true,
+  "seconds": 1.28,
+  "bytes": 16652,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin10",
+  "ok": true,
+  "seconds": 2.83,
+  "bytes": 31865,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin1",
+  "ok": true,
+  "seconds": 2.48,
+  "bytes": 31861,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin2",
+  "ok": true,
+  "seconds": 2.65,
+  "bytes": 31863,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin3",
+  "ok": true,
+  "seconds": 2.68,
+  "bytes": 31864,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin4",
+  "ok": true,
+  "seconds": 2.56,
+  "bytes": 31865,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin5",
+  "ok": true,
+  "seconds": 2.62,
+  "bytes": 31865,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin6",
+  "ok": true,
+  "seconds": 2.73,
+  "bytes": 31864,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin7",
+  "ok": true,
+  "seconds": 2.59,
+  "bytes": 31858,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin8",
+  "ok": true,
+  "seconds": 2.77,
+  "bytes": 31879,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "finance",
+  "task": "fin9",
+  "ok": true,
+  "seconds": 2.95,
+  "bytes": 31861,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "ops",
+  "task": "ops1",
+  "ok": true,
+  "seconds": 1.12,
+  "bytes": 13289,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "ops",
+  "task": "ops2",
+  "ok": true,
+  "seconds": 1.25,
+  "bytes": 13285,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "ops",
+  "task": "ops4",
+  "ok": true,
+  "seconds": 1.17,
+  "bytes": 13290,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "ops",
+  "task": "ops6",
+  "ok": true,
+  "seconds": 1.1,
+  "bytes": 13286,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "ops",
+  "task": "ops7",
+  "ok": true,
+  "seconds": 1.27,
+  "bytes": 13286,
+  "err": ""
+ },
+ {
+  "model": "claude-opus-5-5",
+  "domain": "ops",
+  "task": "ops9",
+  "ok": true,
+  "seconds": 1.16,
+  "bytes": 13291,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code10",
+  "ok": true,
+  "seconds": 2.41,
+  "bytes": 28818,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code1",
+  "ok": true,
+  "seconds": 2.2,
+  "bytes": 27109,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code2",
+  "ok": true,
+  "seconds": 2.61,
+  "bytes": 29471,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code3",
+  "ok": true,
+  "seconds": 2.43,
+  "bytes": 29470,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code4",
+  "ok": true,
+  "seconds": 2.08,
+  "bytes": 25589,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code5",
+  "ok": true,
+  "seconds": 2.62,
+  "bytes": 28818,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code6",
+  "ok": true,
+  "seconds": 2.8,
+  "bytes": 29470,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code7",
+  "ok": true,
+  "seconds": 2.25,
+  "bytes": 27109,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code8",
+  "ok": true,
+  "seconds": 2.38,
+  "bytes": 26453,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "code",
+  "task": "code9",
+  "ok": true,
+  "seconds": 2.69,
+  "bytes": 29475,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em10",
+  "ok": true,
+  "seconds": 1.61,
+  "bytes": 19200,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em1",
+  "ok": true,
+  "seconds": 1.68,
+  "bytes": 19069,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em2",
+  "ok": true,
+  "seconds": 1.63,
+  "bytes": 19080,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em3",
+  "ok": true,
+  "seconds": 1.14,
+  "bytes": 14233,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em4",
+  "ok": true,
+  "seconds": 1.44,
+  "bytes": 16646,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em5",
+  "ok": true,
+  "seconds": 1.11,
+  "bytes": 14349,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em6",
+  "ok": true,
+  "seconds": 1.64,
+  "bytes": 19140,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em7",
+  "ok": true,
+  "seconds": 1.32,
+  "bytes": 16646,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em8",
+  "ok": true,
+  "seconds": 1.74,
+  "bytes": 19190,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "email",
+  "task": "em9",
+  "ok": true,
+  "seconds": 1.53,
+  "bytes": 16652,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin10",
+  "ok": true,
+  "seconds": 2.71,
+  "bytes": 31866,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin1",
+  "ok": true,
+  "seconds": 3.76,
+  "bytes": 37237,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin2",
+  "ok": true,
+  "seconds": 2.61,
+  "bytes": 31865,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin3",
+  "ok": true,
+  "seconds": 3.21,
+  "bytes": 35180,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin4",
+  "ok": true,
+  "seconds": 3.28,
+  "bytes": 35294,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin5",
+  "ok": true,
+  "seconds": 2.54,
+  "bytes": 31862,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin6",
+  "ok": true,
+  "seconds": 2.8,
+  "bytes": 31865,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin7",
+  "ok": true,
+  "seconds": 2.79,
+  "bytes": 31862,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin8",
+  "ok": true,
+  "seconds": 2.67,
+  "bytes": 31863,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "finance",
+  "task": "fin9",
+  "ok": true,
+  "seconds": 3.05,
+  "bytes": 33533,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops10",
+  "ok": true,
+  "seconds": 1.11,
+  "bytes": 13297,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops1",
+  "ok": true,
+  "seconds": 1.09,
+  "bytes": 13296,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops2",
+  "ok": true,
+  "seconds": 1.11,
+  "bytes": 13289,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops3",
+  "ok": true,
+  "seconds": 1.09,
+  "bytes": 13289,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops4",
+  "ok": true,
+  "seconds": 1.08,
+  "bytes": 13291,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops5",
+  "ok": true,
+  "seconds": 1.05,
+  "bytes": 13291,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops6",
+  "ok": true,
+  "seconds": 1.01,
+  "bytes": 13290,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops7",
+  "ok": true,
+  "seconds": 1.22,
+  "bytes": 13291,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops8",
+  "ok": true,
+  "seconds": 1.11,
+  "bytes": 13290,
+  "err": ""
+ },
+ {
+  "model": "claude-sonnet-5-5",
+  "domain": "ops",
+  "task": "ops9",
+  "ok": true,
+  "seconds": 1.06,
+  "bytes": 13290,
+  "err": ""
+ }
+]

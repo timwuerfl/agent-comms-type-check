@@ -1,0 +1,13 @@
+// Multi-agent debate with a judge and a bounded number of rounds.
+protocol Debate {
+  roles Moderator, Pro, Con, Judge;
+  Moderator -> Pro : Motion(str);
+  Moderator -> Con : Motion(str);
+  rec Round max 3 {
+    Pro -> Con : Argument(str) where len <= 3000;
+    Con -> Pro : Rebuttal(str) where len <= 3000;
+    choice at Pro { Pro -> Con : Again; Con -> Judge : Continue; continue Round; }
+    or { Pro -> Con : Rest; Con -> Judge : Closing(str); }
+  }
+  Judge -> Moderator : Verdict({winner: enum{pro, con, tie}, reason: str});
+}

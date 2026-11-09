@@ -1,0 +1,19 @@
+// Human-in-the-loop approval for tool use, with refinements on the command.
+protocol ApprovalGate {
+  roles User, Agent, Human, Shell;
+  endorser Human;
+  sensitive Agent -> Shell;
+  User -> Agent : Task(str) where len <= 2000;
+  rec Step max 5 {
+    Agent -> Human : Propose({cmd: enum{ls, cat, grep, df}, arg: str}) where arg.len <= 120 and arg !contains ";" and arg !contains "|";
+    choice at Human {
+      Human -> Agent : Approve({cmd: enum{ls, cat, grep, df}, arg: str});
+      call Agent -> Shell : exec({cmd: enum{ls, cat, grep, df}, arg: str}) returns str;
+      choice at Agent { continue Step; } or { Agent -> User : Done(str); }
+    } or {
+      Human -> Agent : Deny(str);
+      Agent -> User : Aborted(str);
+    }
+  }
+  property NoUnapprovedExec: Agent -> Shell : exec implies prev Human -> Agent : Approve;
+}

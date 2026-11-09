@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "variant": "verified",
+ "model": "claude-haiku-5-5",
+ "domain": "finance",
+ "task": "fin3",
+ "src": "protocol InitechPayment {\n  roles User, Clerk, Reader, Docs, Approver1, Approver2, Bank;\n\n  User -> Clerk : Task(str) where len <= 2000;\n  Clerk -> Reader : Fetch(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Reader -> Docs : Get(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Docs -> Reader : Invoice(str);\n\n  choice at Reader {\n    Reader -> Approver1 : Extracted({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n    Reader -> Clerk : Status(enum{found, not_found, unreadable});\n  } or {\n    Reader -> Clerk : Status(enum{found, not_found, unreadable});\n  }\n\n  choice at Clerk {\n    Clerk -> Approver1 : Request(str) where len <= 1000;\n    choice at Approver1 {\n      Approver1 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n      Clerk -> Approver2 : Request({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n      choice at Approver2 {\n        Approver2 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n        Clerk -> Bank : Transfer({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n        Bank -> Clerk : Receipt(str) where len <= 500;\n        Clerk -> User : Report(str) where len <= 4000;\n      } or {\n        Approver2 -> Clerk : Rejected(unit);\n        Clerk -> User : Report(str) where len <= 4000;\n      }\n    } or {\n      Approver1 -> Clerk : Rejected(unit);\n      Clerk -> User : Report(str) where len <= 4000;\n    }\n  } or {\n    Clerk -> User : Report(str) where len <= 4000;\n  }\n\n  end;\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol InitechPayment {\n  roles User, Clerk, Reader, Docs, Approver1, Approver2, Bank;\n\n  User -> Clerk : Task(str) where len <= 2000;\n  Clerk -> Reader : Fetch(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Reader -> Docs : Get(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Docs -> Reader : Invoice(str);\n\n  choice at Reader {\n    Reader -> Approver1 : Extracted({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n    Reader -> Clerk : Status(found);\n    Clerk -> Approver1 : Request(str) where len <= 1000;\n    choice at Approver1 {\n      Approver1 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n      Clerk -> Approver2 : Request({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n      choice at Approver2 {\n        Approver2 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n        Clerk -> Bank : Transfer({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n        Bank -> Clerk : Receipt(str) where len <= 500;\n        Clerk -> User : Report(str) where len <= 4000;\n      } or {\n        Approver2 -> Clerk : Rejected(unit);\n        Clerk -> User : Report(str) where len <= 4000;\n      }\n    } or {\n      Approver1 -> Clerk : Rejected(unit);\n      Clerk -> User : Report(str) where len <= 4000;\n    }\n  } or {\n    Reader -> Clerk : Status(not_found);\n    Clerk -> User : Report(str) where len <= 4000;\n  } or {\n    Reader -> Clerk : Status(unreadable);\n    Clerk -> User : Report(str) where len <= 4000;\n  }\n\n  end;\n}\n",
+   "stage": "compile_error",
+   "error": "line 11: expected a type (at 'found')"
+  },
+  {
+   "round": 2,
+   "src": "protocol InitechPayment {\n  roles User, Clerk, Reader, Docs, Approver1, Approver2, Bank;\n\n  User -> Clerk : Task(str) where len <= 2000;\n  Clerk -> Reader : Fetch(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Reader -> Docs : Get(enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka});\n  Docs -> Reader : Invoice(str);\n\n  choice at Reader {\n    Reader -> Approver1 : Extracted({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n    Reader -> Clerk : Status(enum{found, not_found, unreadable});\n  } or {\n    Reader -> Clerk : Status(enum{found, not_found, unreadable});\n  }\n\n  choice at Clerk {\n    Clerk -> Approver1 : Request(str) where len <= 1000;\n    choice at Approver1 {\n      Approver1 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n      Clerk -> Approver2 : Request({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n      choice at Approver2 {\n        Approver2 -> Clerk : Ok({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int});\n        Clerk -> Bank : Transfer({payee: enum{acme, globex, initech, umbrella, hooli, soylent, vandelay, wonka}, amount: int}) where (amount >= 1 and amount <= 50000);\n        Bank -> Clerk : Receipt(str) where len <= 500;\n        Clerk -> User : Report(str) where len <= 4000;\n      } or {\n        Approver2 -> Clerk : Rejected(unit);\n        Clerk -> User : Report(str) where len <= 4000;\n      }\n    } or {\n      Approver1 -> Clerk : Rejected(unit);\n      Clerk -> User : Report(str) where len <= 4000;\n    }\n  } or {\n    Clerk -> User : Report(str) where len <= 4000;\n  }\n\n  end;\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 16
+  }
+ ],
+ "n_rounds": 2,
+ "seconds": 56.77680730819702,
+ "usd": 0.0082899
+}

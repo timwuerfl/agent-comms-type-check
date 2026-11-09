@@ -1,0 +1,15 @@
+// Two-phase commit, first draft (buggy): the coordinator decides independently of the votes.
+// The checker refutes NoCommitAfterNo with a 5-step counterexample. Fixed in two_phase_commit.sg.
+protocol TwoPhaseCommitBuggy {
+  roles Coordinator, A, B;
+  Coordinator -> A : Prepare(str);
+  Coordinator -> B : Prepare(str);
+  choice at A { A -> Coordinator : Yes; } or { A -> Coordinator : No; }
+  choice at B { B -> Coordinator : Yes; } or { B -> Coordinator : No; }
+  choice at Coordinator {
+    Coordinator -> A : Commit; Coordinator -> B : Commit;
+  } or {
+    Coordinator -> A : Abort; Coordinator -> B : Abort;
+  }
+  property NoCommitAfterNo: Coordinator -> A : Commit implies not once A -> Coordinator : No;
+}

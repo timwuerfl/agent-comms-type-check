@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "variant": "unverified",
+ "model": "claude-sonnet-5-5",
+ "domain": "ops",
+ "task": "ops1",
+ "src": "protocol RunbookOps {\n  roles User, Planner, Researcher, Web, Approver, Executor, Shell;\n  User -> Planner : Task(str) where len <= 2000;\n  Planner -> Researcher : Query(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Researcher -> Web : Get(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Web -> Researcher : Page(str);\n  Researcher -> Planner : Recommend(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n  Planner -> Approver : Propose(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n  choice at Approver {\n    Approver -> Executor : Approved(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Executor -> Shell : Exec(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Shell -> Executor : Out(str);\n    Executor -> Planner : Result(str) where len <= 4000;\n    Planner -> User : Report(str) where len <= 4000;\n    end;\n  } or {\n    Approver -> Planner : Denied;\n    Planner -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol RunbookOps {\n  roles User, Planner, Researcher, Web, Approver, Executor, Shell;\n  User -> Planner : Task(str) where len <= 2000;\n  Planner -> Researcher : Query(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  call Researcher -> Web : Get(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577}) returns str;\n  Researcher -> Planner : Recommend(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n  Planner -> Approver : Propose(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n  choice at Approver {\n    Approver -> Executor : Approved(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    call Executor -> Shell : Exec(enum{df_h, du_var_log, free_m, uptime, ls_var_log}) returns str;\n    Executor -> Planner : Result(str) where len <= 4000;\n    Planner -> User : Report(str) where len <= 4000;\n    end;\n  } or {\n    Approver -> Planner : Denied;\n    Planner -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+   "stage": "checked",
+   "admitted": false,
+   "failed": [
+    "catalog"
+   ],
+   "noStuck": true,
+   "completion": true,
+   "states": 13
+  },
+  {
+   "round": 2,
+   "src": "protocol RunbookOps {\n  roles User, Planner, Researcher, Web, Approver, Executor, Shell;\n  User -> Planner : Task(str) where len <= 2000;\n  Planner -> Researcher : Query(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Researcher -> Web : Get(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Web -> Researcher : Page(str);\n  Researcher -> Planner : Recommend(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n  Planner -> Approver : Propose(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n  choice at Approver {\n    Approver -> Executor : Approved(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Executor -> Shell : Exec(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Shell -> Executor : Out(str);\n    Executor -> Planner : Result(str) where len <= 4000;\n    Planner -> User : Report(str) where len <= 4000;\n    end;\n  } or {\n    Approver -> Planner : Denied;\n    Planner -> User : Report(str) where len <= 4000;\n    end;\n  }\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 13
+  }
+ ],
+ "n_rounds": 2,
+ "seconds": 24.337019443511963,
+ "usd": 0.030964
+}

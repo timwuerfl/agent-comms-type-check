@@ -1,0 +1,12 @@
+// AgentDojo-style email assistant, naive: the assistant reads untrusted mail and may send mail.
+protocol EmailAssistantNaive {
+  roles User, Assistant, Inbox, Outbox;
+  untrusted Inbox;
+  sensitive Assistant -> Outbox;
+  User -> Assistant : Request(str);
+  call Assistant -> Inbox : read(enum{unread, all}) returns str;
+  choice at Assistant {
+    call Assistant -> Outbox : send({to: str, subject: str, body: str}) returns bool;
+    Assistant -> User : Done(str);
+  } or { Assistant -> User : Done(str); }
+}

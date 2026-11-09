@@ -1,0 +1,15 @@
+// Plan-then-execute (Beurer-Kellner et al. 2025; CaMeL-style): the LLM planner fixes the plan before any
+// untrusted data is read, and a deterministic interpreter (endorser) executes it. Untrusted search
+// results only reach a summariser that can answer the user but cannot act.
+protocol PlanThenExecute {
+  roles User, Planner, Interpreter, Search, Calendar, Summarizer;
+  untrusted Search;
+  endorser Interpreter;
+  sensitive * -> Calendar;
+  User -> Planner : Goal(str);
+  Planner -> Interpreter : Plan({query: str, book: enum{none, meeting_30, meeting_60}});
+  call Interpreter -> Search : search(str) returns str;
+  call Interpreter -> Calendar : book(enum{none, meeting_30, meeting_60}) returns bool;
+  Interpreter -> Summarizer : Material(str);
+  Summarizer -> User : Answer(str);
+}

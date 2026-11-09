@@ -1,0 +1,32 @@
+// Evaluation scenario S1, naive design: a typical "planner + researcher + executor" swarm.
+// The gate enforces who-talks-to-whom-when, but free-text flows from the web to the executor.
+protocol OpsNaive {
+  roles User, Planner, Researcher, Web, Approver, Executor, Shell, Mail;
+  untrusted Web;
+  endorser Approver;
+  sensitive Executor -> Shell : Exec, Planner -> Mail : Send;
+  lowcap 8;
+  budget 60;
+
+  User -> Planner : Task(str) where len <= 2000;
+  rec Research max 2 {
+    Planner -> Researcher : Query(str) where len <= 500;
+    Researcher -> Web : Get(str) where len <= 200;
+    Web -> Researcher : Page(str);
+    Researcher -> Planner : Notes(str) where len <= 4000;
+    choice at Planner { continue Research; } or { Planner -> Approver : Propose(str) where len <= 200; }
+  }
+  choice at Approver {
+    Approver -> Executor : Approved(str);
+    Executor -> Shell : Exec(str);
+    Shell -> Executor : Out(str);
+    Executor -> Planner : Result(str);
+  } or {
+    Approver -> Planner : Denied;
+  }
+  Planner -> Mail : Send({to: str, body: str});   // naive: any recipient
+  Planner -> User : Report(str);
+
+  property ExecOnlyAfterApproval: Executor -> Shell : Exec implies once Approver -> Executor : Approved;
+  property NoMailBeforeTask: Planner -> Mail : Send implies once User -> Planner : Task;
+}

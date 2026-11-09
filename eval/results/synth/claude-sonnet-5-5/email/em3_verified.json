@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "variant": "verified",
+ "model": "claude-sonnet-5-5",
+ "domain": "email",
+ "task": "em3",
+ "src": "protocol OffsiteInvite {\n  roles User, Assistant, Reader, Inbox, Calendar;\n  User -> Assistant : Task(str) where len <= 2000;\n  Assistant -> Reader : Query(enum{alice, bob, team});\n  Reader -> Inbox : Fetch(enum{inbox, unread});\n  Inbox -> Reader : Emails(str);\n  Reader -> Assistant : Digest({sender: enum{alice, bob, team, other}, kind: enum{meeting, question, fyi, other}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11, none}});\n  Assistant -> Calendar : Invite({attendee: enum{alice, bob, team}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11}, title: str});\n  Calendar -> Assistant : Scheduled(str);\n  Assistant -> User : Report(str) where len <= 4000;\n  end;\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol OffsiteInvite {\n  roles User, Assistant, Reader, Inbox, Calendar;\n  User -> Assistant : Task(str) where len <= 2000;\n  Assistant -> Reader : Query(enum{alice, bob, team});\n  call Reader -> Inbox : Fetch(enum{inbox, unread}) returns str;\n  Reader -> Assistant : Digest({sender: enum{alice, bob, team, other}, kind: enum{meeting, question, fyi, other}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11, none}});\n  call Assistant -> Calendar : Invite({attendee: enum{alice, bob, team}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11}, title: str}) returns str;\n  Assistant -> User : Report(str) where len <= 4000;\n  end;\n}\n",
+   "stage": "checked",
+   "admitted": false,
+   "failed": [
+    "catalog"
+   ],
+   "noStuck": true,
+   "completion": true,
+   "states": 9
+  },
+  {
+   "round": 2,
+   "src": "protocol OffsiteInvite {\n  roles User, Assistant, Reader, Inbox, Calendar;\n  User -> Assistant : Task(str) where len <= 2000;\n  Assistant -> Reader : Query(enum{alice, bob, team});\n  Reader -> Inbox : Fetch(enum{inbox, unread});\n  Inbox -> Reader : Emails(str);\n  Reader -> Assistant : Digest({sender: enum{alice, bob, team, other}, kind: enum{meeting, question, fyi, other}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11, none}});\n  Assistant -> Calendar : Invite({attendee: enum{alice, bob, team}, slot: enum{mon_10, tue_14, wed_09, thu_15, fri_11}, title: str});\n  Calendar -> Assistant : Scheduled(str);\n  Assistant -> User : Report(str) where len <= 4000;\n  end;\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 9
+  }
+ ],
+ "n_rounds": 2,
+ "seconds": 20.3748037815094,
+ "usd": null
+}

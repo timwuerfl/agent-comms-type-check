@@ -1,0 +1,25 @@
+{
+ "ok": true,
+ "variant": "verified",
+ "model": "claude-haiku-5-5",
+ "domain": "email",
+ "task": "em4",
+ "src": "protocol ReplyBobEOD {\n  roles User, Assistant, Confirm, Outbox;\n\n  User -> Assistant : Task(str) where len <= 2000;\n  Assistant -> Confirm : Draft({to: enum{alice, bob, team}, subject: str, body: str});\n\n  choice at Confirm {\n    Confirm -> Assistant : Confirmed(unit);\n    Assistant -> Outbox : Send({to: enum{alice, bob, team}, subject: str, body: str});\n    Assistant -> User : Report(str) where len <= 4000;\n  } or {\n    Confirm -> Assistant : Rejected(unit);\n    Assistant -> User : Report(str) where len <= 4000;\n  }\n\n  end;\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol ReplyBobEOD {\n  roles User, Assistant, Confirm, Outbox;\n\n  User -> Assistant : Task(str) where len <= 2000;\n  Assistant -> Confirm : Draft({to: enum{alice, bob, team}, subject: str, body: str});\n\n  choice at Confirm {\n    Confirm -> Assistant : Confirmed(unit);\n    Assistant -> Outbox : Send({to: enum{alice, bob, team}, subject: str, body: str});\n    Assistant -> User : Report(str) where len <= 4000;\n  } or {\n    Confirm -> Assistant : Rejected(unit);\n    Assistant -> User : Report(str) where len <= 4000;\n  }\n\n  end;\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 7
+  }
+ ],
+ "n_rounds": 1,
+ "seconds": 14.64623761177063,
+ "usd": 0.001873
+}

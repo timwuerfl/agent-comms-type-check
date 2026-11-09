@@ -1,0 +1,74 @@
+{
+ "claude-haiku-5-5/code": {
+  "n": 10,
+  "finite": 10,
+  "median": 9.0,
+  "max": 16
+ },
+ "claude-haiku-5-5/email": {
+  "n": 10,
+  "finite": 10,
+  "median": 10.0,
+  "max": 10
+ },
+ "claude-haiku-5-5/finance": {
+  "n": 10,
+  "finite": 10,
+  "median": 70.0,
+  "max": 74
+ },
+ "claude-haiku-5-5/ops": {
+  "n": 10,
+  "finite": 10,
+  "median": 6.0,
+  "max": 10
+ },
+ "claude-sonnet-5-5/code": {
+  "n": 10,
+  "finite": 10,
+  "median": 9.0,
+  "max": 9
+ },
+ "claude-sonnet-5-5/email": {
+  "n": 10,
+  "finite": 10,
+  "median": 10.0,
+  "max": 10
+ },
+ "claude-sonnet-5-5/finance": {
+  "n": 10,
+  "finite": 10,
+  "median": 70.0,
+  "max": 74
+ },
+ "claude-sonnet-5-5/ops": {
+  "n": 10,
+  "finite": 10,
+  "median": 6.0,
+  "max": 6
+ },
+ "claude-opus-5-5/code": {
+  "n": 10,
+  "finite": 10,
+  "median": 9.0,
+  "max": 9
+ },
+ "claude-opus-5-5/email": {
+  "n": 10,
+  "finite": 10,
+  "median": 10.0,
+  "max": 10
+ },
+ "claude-opus-5-5/finance": {
+  "n": 10,
+  "finite": 10,
+  "median": 70.0,
+  "max": 70
+ },
+ "claude-opus-5-5/ops": {
+  "n": 6,
+  "finite": 6,
+  "median": 6.0,
+  "max": 6
+ }
+}

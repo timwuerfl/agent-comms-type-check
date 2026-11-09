@@ -1,0 +1,35 @@
+// Evaluation scenario S1, hardened design (IFC-verified): the quarantined-reader pattern.
+// The researcher reads untrusted pages but can only answer with low-capacity typed findings; the
+// executor receives commands only from the (non-LLM) approver, drawn from an allowlist.
+protocol OpsHardened {
+  roles User, Planner, Researcher, Web, Approver, Executor, Shell, Mail;
+  untrusted Web;
+  endorser Approver;
+  sensitive Executor -> Shell : Exec, Planner -> Mail : Send;
+  lowcap 8;
+  budget 60;
+  type Cmd = enum{df_h, du_var_log, free_m, uptime, ls_var_log};
+  type Finding = {topic: enum{disk, memory, logs, load, none}, severity: enum{low, medium, high}};
+
+  User -> Planner : Task(str) where len <= 2000;
+  rec Research max 2 {
+    Planner -> Researcher : Query(enum{disk, memory, logs, load});
+    Researcher -> Web : Get(enum{disk, memory, logs, load});
+    Web -> Researcher : Page(str);
+    Researcher -> Planner : Finding(Finding);
+    choice at Planner { continue Research; } or { Planner -> Approver : Propose(Cmd); }
+  }
+  choice at Approver {
+    Approver -> Executor : Approved(Cmd);
+    Executor -> Shell : Exec(Cmd);
+    Shell -> Executor : Out(str);
+    Executor -> Planner : Result(str);
+  } or {
+    Approver -> Planner : Denied;
+  }
+  Planner -> Mail : Send({to: enum{ops_team}, body: str});
+  Planner -> User : Report(str);
+
+  property ExecOnlyAfterApproval: Executor -> Shell : Exec implies once Approver -> Executor : Approved;
+  property NoMailBeforeTask: Planner -> Mail : Send implies once User -> Planner : Task;
+}

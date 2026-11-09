@@ -1,0 +1,21 @@
+// Separation of duty: a payment needs approval from two distinct approvers (2-of-2), bounded amounts,
+// allowlisted payees.
+protocol Payments {
+  roles Requester, Agent, Approver1, Approver2, Bank;
+  endorser Approver1, Approver2;
+  sensitive Agent -> Bank;
+  type Pay = {payee: enum{acme_corp, globex, initech}, amount: int};
+  Requester -> Agent : Invoice(str);
+  Agent -> Approver1 : Request(Pay) where amount >= 1 and amount <= 10000;
+  choice at Approver1 {
+    Approver1 -> Agent : Ok1;
+    Agent -> Approver2 : Request(Pay) where amount >= 1 and amount <= 10000;
+    choice at Approver2 {
+      Approver2 -> Agent : Ok2;
+      Agent -> Bank : Transfer(Pay) where amount >= 1 and amount <= 10000;
+      Bank -> Agent : Receipt(str);
+      Agent -> Requester : Paid(str);
+    } or { Approver2 -> Agent : Reject2; Agent -> Requester : Rejected; }
+  } or { Approver1 -> Agent : Reject1; Agent -> Requester : Rejected; }
+  property TwoApprovals: Agent -> Bank : Transfer implies (once Approver1 -> Agent : Ok1 and once Approver2 -> Agent : Ok2);
+}

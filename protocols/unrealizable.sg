@@ -1,0 +1,8 @@
+// Counter-example for decentralised enforcement: C cannot know whether A has already spoken to B.
+// Central enforcement is fine; per-organisation sidecars would admit C->D before A->B.
+protocol Unrealizable {
+  roles A, B, C, D;
+  A -> B : First;
+  C -> D : Second;
+  property Order: C -> D : Second implies once A -> B : First;
+}

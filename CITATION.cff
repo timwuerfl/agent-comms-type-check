@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Lean-Verified Session Protocols as the Security Boundary of LLM Agent Swarms"
+message: "If you use this software or its ideas, please cite the paper."
+authors:
+  - given-names: Mauricio
+    family-names: Neubecker
+    affiliation: "Technical University of Munich; Safe AI Germany"
+  - given-names: Tim
+    family-names: Würfl
+    affiliation: "Technical University of Munich; Safe AI Germany"
+  - given-names: Maximilian
+    family-names: Eder
+    affiliation: "Technical University of Munich; Safe AI Germany"
+abstract: >-
+  A swarm runtime in which inter-agent messages are typed by a Lean-4-checked multiparty session protocol
+  and enforced at runtime by a verified reference monitor, so untrusted LLM agents can only communicate in
+  ways the declared protocol allows.
+keywords: [multi-agent systems, LLM agents, session types, Lean 4, reference monitor, prompt injection, AI safety]
+license: Apache-2.0

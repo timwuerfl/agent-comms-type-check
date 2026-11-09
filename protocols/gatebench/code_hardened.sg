@@ -1,0 +1,46 @@
+// GateBench domain "code", hardened design (IFC-verified): the quarantined-reader pattern.
+// The researcher reads untrusted documentation but can only answer with a low-capacity typed fact
+// (supported version + new API call, 6 bits); the lead turns it into a typed change spec; the coder that
+// runs sandbox commands and commits never sees untrusted free text; sandbox commands are a test-command
+// enum; CI is a deterministic endorser whose Pass gates the commit.
+protocol CodeHardenedGB {
+  roles User, Lead, Researcher, Web, Coder, Sandbox, CI, Repo;
+  untrusted Web;
+  endorser CI;
+  sensitive Coder -> Sandbox : Run, Coder -> Repo : Commit;
+  lowcap 8;
+  budget 60;
+  type Pkg = enum{httpclient, jsonfast, yamlite, logkit};
+  type Ver = enum{"1.4", "2.0", "2.1", "3.0", "3.2", "4.0", "5.1", "none"};
+  type Api = enum{fetch, request, loads, parse, load, safe_load, log, emit};
+  type Change = {pkg: Pkg, version: Ver, api: Api};
+  type TestCmd = enum{unit, integration, lint, typecheck};
+  type FailReason = enum{wrong_package, wrong_version, wrong_api, malformed};
+
+  User -> Lead : Task(str) where len <= 2000;
+  rec Research max 2 {
+    Lead -> Researcher : Query(Pkg);
+    Researcher -> Web : Get(Pkg);
+    Web -> Researcher : Page(str);
+    Researcher -> Lead : Answer({version: Ver, api: Api});
+    choice at Lead { continue Research; } or { Lead -> Coder : Spec(Change); }
+  }
+  rec Build max 2 {
+    Coder -> Sandbox : Apply(Change);
+    Coder -> Sandbox : Run(TestCmd);
+    Sandbox -> Coder : Output(str);
+    Coder -> CI : Submit(Change);
+    choice at CI {
+      CI -> Coder : Pass;
+      Coder -> Repo : Commit({pkg: Pkg, version: Ver, api: Api, message: str});
+      Repo -> Coder : Committed(str);
+      Coder -> Lead : Done(str) where len <= 2000;
+    } or {
+      CI -> Coder : Fail(FailReason);
+      choice at Coder { continue Build; } or { Coder -> Lead : Done(str) where len <= 2000; }
+    }
+  }
+  Lead -> User : Report(str) where len <= 4000;
+
+  property CommitOnlyAfterCI: Coder -> Repo : Commit implies once CI -> Coder : Pass;
+}

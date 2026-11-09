@@ -1,0 +1,18 @@
+// Fixed design: sending requires an explicit user confirmation of a structured draft (the user is an
+// endorser), and recipients are allowlisted.
+protocol EmailAssistantConfirm {
+  roles User, Assistant, Inbox, Outbox, Confirm;
+  untrusted Inbox;
+  endorser Confirm;
+  sensitive * -> Outbox;
+  User -> Assistant : Request(str);
+  call Assistant -> Inbox : read(enum{unread, all}) returns str;
+  choice at Assistant {
+    Assistant -> Confirm : Draft({to: enum{alice, bob, team}, subject: str, body: str});
+    choice at Confirm {
+      call Confirm -> Outbox : send({to: enum{alice, bob, team}, subject: str, body: str}) returns bool;
+      Confirm -> Assistant : Sent;
+    } or { Confirm -> Assistant : Cancelled; }
+    Assistant -> User : Done(str);
+  } or { Assistant -> User : Done(str); }
+}

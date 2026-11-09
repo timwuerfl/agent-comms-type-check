@@ -1,0 +1,14 @@
+name = "swarmgate"
+version = "0.1.0"
+defaultTargets = ["SwarmGate", "swarmgate"]
+
+[[lean_lib]]
+name = "SwarmGate"
+
+[[lean_exe]]
+name = "swarmgate"
+root = "Main"
+
+[[lean_lib]]
+name = "Protocols"
+globs = ["Protocols.+"]

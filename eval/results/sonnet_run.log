@@ -1,0 +1,17 @@
+[synth] ops/ops1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] ops/ops2/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] email/em1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] email/em2/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin1/verified: ok=True admitted=True rounds=2 failed1=['catalog']
+[synth] finance/fin2/verified: ok=True admitted=True rounds=1 failed1=[]
+[synth] code/code1/verified: ok=True admitted=True rounds=3 failed1=None
+[synth] code/code2/verified: ok=True admitted=True rounds=2 failed1=None
+180 episodes to run (0 already done); spent so far $32.17
+  25/180 episodes, 1.4 min, run spent $0.92, total $33.09
+  50/180 episodes, 2.8 min, run spent $2.01, total $34.18
+  75/180 episodes, 3.7 min, run spent $3.11, total $35.28
+  100/180 episodes, 4.7 min, run spent $4.26, total $36.43
+  125/180 episodes, 5.7 min, run spent $5.41, total $37.61
+  150/180 episodes, 7.7 min, run spent $7.62, total $39.80
+  175/180 episodes, 9.3 min, run spent $9.43, total $41.59
+done. run spent $9.51; total $41.68

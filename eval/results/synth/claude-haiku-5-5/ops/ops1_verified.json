@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "variant": "verified",
+ "model": "claude-haiku-5-5",
+ "domain": "ops",
+ "task": "ops1",
+ "src": "protocol RunbookFix {\n  roles User, Planner, Researcher, Web, Approver, Executor, Shell;\n\n  User -> Planner : Task(str) where len <= 2000;\n\n  Planner -> Researcher : Query(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Researcher -> Web : Get(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Web -> Researcher : Page(str);\n\n  Researcher -> Planner : Recommend(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n\n  Planner -> Approver : Propose(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n\n  choice at Approver {\n    Approver -> Executor : Approved(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Executor -> Shell : Exec(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Shell -> Executor : Out(str);\n    Executor -> Planner : Result(str) where len <= 4000;\n  } or {\n    Approver -> Planner : Denied(unit);\n  }\n\n  Planner -> User : Report(str) where len <= 4000;\n  end;\n}\n",
+ "admitted": true,
+ "report_failed": [],
+ "rounds": [
+  {
+   "round": 1,
+   "src": "protocol RunbookFix {\n  roles User, Planner, Researcher, Web, Approver, Executor, Shell;\n\n  User -> Planner : Task(str) where len <= 2000;\n\n  // Planner selects the runbook using only the enum of allowed runbook IDs.\n  call Planner -> Researcher : Query(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577}) returns unit;\n  Researcher -> Web : Get(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Web -> Researcher : Page(str);\n\n  // Researcher passes back only a low-capacity enum (no taint propagates to Planner).\n  Researcher -> Planner : Recommend(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n\n  // Planner proposes only an enum command; Approver is the endorser that gates execution.\n  Planner -> Approver : Propose(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n\n  choice at Approver {\n    Approver -> Executor : Approved(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    call Executor -> Shell : Exec(enum{df_h, du_var_log, free_m, uptime, ls_var_log}) returns str;\n    Executor -> Planner : Result(str) where len <= 4000;\n  } or {\n    Approver -> Planner : Denied;\n  }\n\n  Planner -> User : Report(str) where len <= 4000;\n  end;\n}\n",
+   "stage": "checked",
+   "admitted": false,
+   "failed": [
+    "catalog"
+   ],
+   "noStuck": true,
+   "completion": true,
+   "states": 13
+  },
+  {
+   "round": 2,
+   "src": "protocol RunbookFix {\n  roles User, Planner, Researcher, Web, Approver, Executor, Shell;\n\n  User -> Planner : Task(str) where len <= 2000;\n\n  Planner -> Researcher : Query(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Researcher -> Web : Get(enum{rb_101, rb_118, rb_204, rb_233, rb_305, rb_342, rb_417, rb_456, rb_512, rb_577});\n  Web -> Researcher : Page(str);\n\n  Researcher -> Planner : Recommend(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n\n  Planner -> Approver : Propose(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n\n  choice at Approver {\n    Approver -> Executor : Approved(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Executor -> Shell : Exec(enum{df_h, du_var_log, free_m, uptime, ls_var_log});\n    Shell -> Executor : Out(str);\n    Executor -> Planner : Result(str) where len <= 4000;\n  } or {\n    Approver -> Planner : Denied(unit);\n  }\n\n  Planner -> User : Report(str) where len <= 4000;\n  end;\n}\n",
+   "stage": "checked",
+   "admitted": true,
+   "failed": [],
+   "noStuck": true,
+   "completion": true,
+   "states": 12
+  }
+ ],
+ "n_rounds": 2,
+ "seconds": 22.886956453323364,
+ "usd": 0.0036452999999999998
+}

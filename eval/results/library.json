@@ -1,0 +1,717 @@
+[
+ {
+  "file": "approval_gate.sg",
+  "name": "ApprovalGate",
+  "roles": 4,
+  "states": 28,
+  "transitions": 36,
+  "properties": [
+   [
+    "NoUnapprovedExec",
+    true
+   ]
+  ],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 22,
+  "decentralised": true,
+  "decentralised_configs": 37,
+  "check_ms": 94.3,
+  "kernel_s": 3.04,
+  "kernel_ok": true,
+  "kernel_theorems": 5,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": 0.0,
+   "Agent": 0.0,
+   "Human": 0.0,
+   "Shell": 0.0
+  }
+ },
+ {
+  "file": "critic_reviser.sg",
+  "name": "CriticReviser",
+  "roles": 3,
+  "states": 11,
+  "transitions": 13,
+  "properties": [],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 10,
+  "decentralised": true,
+  "decentralised_configs": 11,
+  "check_ms": 64.8,
+  "kernel_s": 0.78,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {}
+ },
+ {
+  "file": "debate.sg",
+  "name": "Debate",
+  "roles": 4,
+  "states": 18,
+  "transitions": 19,
+  "properties": [],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 15,
+  "decentralised": true,
+  "decentralised_configs": 22,
+  "check_ms": 47.1,
+  "kernel_s": 1.24,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {}
+ },
+ {
+  "file": "dual_llm.sg",
+  "name": "DualLLM",
+  "roles": 6,
+  "states": 12,
+  "transitions": 12,
+  "properties": [],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 11,
+  "decentralised": true,
+  "decentralised_configs": 14,
+  "check_ms": 96.0,
+  "kernel_s": 1.2,
+  "kernel_ok": true,
+  "kernel_theorems": 4,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": 0.0,
+   "Privileged": 0.0,
+   "Controller": 0.0,
+   "Quarantined": 0.0,
+   "Inbox": null,
+   "Mailer": 0.0
+  }
+ },
+ {
+  "file": "email_assistant.sg",
+  "name": "EmailAssistantNaive",
+  "roles": 4,
+  "states": 7,
+  "transitions": 7,
+  "properties": [],
+  "ifc": false,
+  "ifc_counterexample": {
+   "then": {
+    "src": "Assistant",
+    "label": "send",
+    "dst": "Outbox"
+   },
+   "taintedRoles": [
+    "Assistant",
+    "Inbox"
+   ],
+   "path": [
+    {
+     "src": "User",
+     "label": "Request",
+     "dst": "Assistant"
+    },
+    {
+     "src": "Assistant",
+     "label": "read",
+     "dst": "Inbox"
+    },
+    {
+     "src": "Inbox",
+     "label": "read_result",
+     "dst": "Assistant"
+    }
+   ]
+  },
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 6,
+  "decentralised": true,
+  "decentralised_configs": 8,
+  "check_ms": 54.9,
+  "kernel_s": 0.62,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": null,
+   "Assistant": null,
+   "Inbox": null,
+   "Outbox": null
+  }
+ },
+ {
+  "file": "email_assistant_confirm.sg",
+  "name": "EmailAssistantConfirm",
+  "roles": 5,
+  "states": 9,
+  "transitions": 10,
+  "properties": [],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 8,
+  "decentralised": true,
+  "decentralised_configs": 12,
+  "check_ms": 53.7,
+  "kernel_s": 0.9,
+  "kernel_ok": true,
+  "kernel_theorems": 4,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": null,
+   "Assistant": null,
+   "Inbox": null,
+   "Outbox": 0.0,
+   "Confirm": 0.0
+  }
+ },
+ {
+  "file": "group_chat.sg",
+  "name": "GroupChat",
+  "roles": 5,
+  "states": 23,
+  "transitions": 37,
+  "properties": [],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 12,
+  "decentralised": true,
+  "decentralised_configs": 218,
+  "check_ms": 43.6,
+  "kernel_s": 17.79,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {}
+ },
+ {
+  "file": "handoff.sg",
+  "name": "Handoff",
+  "roles": 5,
+  "states": 7,
+  "transitions": 8,
+  "properties": [
+   [
+    "RefundOnlyViaBilling",
+    true
+   ]
+  ],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 5,
+  "decentralised": true,
+  "decentralised_configs": 9,
+  "check_ms": 39.7,
+  "kernel_s": 0.81,
+  "kernel_ok": true,
+  "kernel_theorems": 5,
+  "kernel_errors": "",
+  "influence_bits": {
+   "Customer": 0.0,
+   "Triage": 0.0,
+   "Billing": 0.0,
+   "Tech": 0.0,
+   "Refunds": 0.0
+  }
+ },
+ {
+  "file": "naive_research.sg",
+  "name": "NaiveResearch",
+  "roles": 5,
+  "states": 8,
+  "transitions": 7,
+  "properties": [],
+  "ifc": false,
+  "ifc_counterexample": {
+   "then": {
+    "src": "Coder",
+    "label": "run",
+    "dst": "Sandbox"
+   },
+   "taintedRoles": [
+    "Researcher",
+    "Web",
+    "Coder"
+   ],
+   "path": [
+    {
+     "src": "User",
+     "label": "Question",
+     "dst": "Researcher"
+    },
+    {
+     "src": "Researcher",
+     "label": "fetch",
+     "dst": "Web"
+    },
+    {
+     "src": "Web",
+     "label": "fetch_result",
+     "dst": "Researcher"
+    },
+    {
+     "src": "Researcher",
+     "label": "Instructions",
+     "dst": "Coder"
+    }
+   ]
+  },
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 7,
+  "decentralised": true,
+  "decentralised_configs": 8,
+  "check_ms": 48.8,
+  "kernel_s": 0.67,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": null,
+   "Researcher": null,
+   "Web": null,
+   "Coder": null,
+   "Sandbox": null
+  }
+ },
+ {
+  "file": "ops_hardened.sg",
+  "name": "OpsHardened",
+  "roles": 8,
+  "states": 17,
+  "transitions": 18,
+  "properties": [
+   [
+    "ExecOnlyAfterApproval",
+    true
+   ],
+   [
+    "NoMailBeforeTask",
+    true
+   ]
+  ],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 16,
+  "decentralised": true,
+  "decentralised_configs": 30,
+  "check_ms": 43.5,
+  "kernel_s": 2.61,
+  "kernel_ok": true,
+  "kernel_theorems": 6,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": 0.0,
+   "Planner": 10.0,
+   "Researcher": null,
+   "Web": null,
+   "Approver": 0.0,
+   "Executor": 0.0,
+   "Shell": 0.0,
+   "Mail": 0.0
+  }
+ },
+ {
+  "file": "ops_naive.sg",
+  "name": "OpsNaive",
+  "roles": 8,
+  "states": 17,
+  "transitions": 18,
+  "properties": [
+   [
+    "ExecOnlyAfterApproval",
+    true
+   ],
+   [
+    "NoMailBeforeTask",
+    true
+   ]
+  ],
+  "ifc": false,
+  "ifc_counterexample": {
+   "then": {
+    "src": "Planner",
+    "label": "Send",
+    "dst": "Mail"
+   },
+   "taintedRoles": [
+    "Planner",
+    "Researcher",
+    "Web"
+   ],
+   "path": [
+    {
+     "src": "User",
+     "label": "Task",
+     "dst": "Planner"
+    },
+    {
+     "src": "Planner",
+     "label": "Query",
+     "dst": "Researcher"
+    },
+    {
+     "src": "Researcher",
+     "label": "Get",
+     "dst": "Web"
+    },
+    {
+     "src": "Web",
+     "label": "Page",
+     "dst": "Researcher"
+    },
+    {
+     "src": "Researcher",
+     "label": "Notes",
+     "dst": "Planner"
+    },
+    {
+     "src": "Planner",
+     "label": "Propose",
+     "dst": "Approver"
+    },
+    {
+     "src": "Approver",
+     "label": "Denied",
+     "dst": "Planner"
+    }
+   ]
+  },
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 16,
+  "decentralised": true,
+  "decentralised_configs": 30,
+  "check_ms": 45.8,
+  "kernel_s": 2.3,
+  "kernel_ok": true,
+  "kernel_theorems": 5,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": null,
+   "Planner": null,
+   "Researcher": null,
+   "Web": null,
+   "Approver": 0.0,
+   "Executor": 0.0,
+   "Shell": 0.0,
+   "Mail": null
+  }
+ },
+ {
+  "file": "payments.sg",
+  "name": "Payments",
+  "roles": 5,
+  "states": 11,
+  "transitions": 12,
+  "properties": [
+   [
+    "TwoApprovals",
+    true
+   ]
+  ],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 8,
+  "decentralised": true,
+  "decentralised_configs": 13,
+  "check_ms": 56.5,
+  "kernel_s": 1.52,
+  "kernel_ok": true,
+  "kernel_theorems": 5,
+  "kernel_errors": "",
+  "influence_bits": {
+   "Requester": 0.0,
+   "Agent": 0.0,
+   "Approver1": 0.0,
+   "Approver2": 0.0,
+   "Bank": 0.0
+  }
+ },
+ {
+  "file": "plan_then_execute.sg",
+  "name": "PlanThenExecute",
+  "roles": 6,
+  "states": 9,
+  "transitions": 8,
+  "properties": [],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 8,
+  "decentralised": true,
+  "decentralised_configs": 9,
+  "check_ms": 45.6,
+  "kernel_s": 0.73,
+  "kernel_ok": true,
+  "kernel_theorems": 4,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": 0.0,
+   "Planner": 0.0,
+   "Interpreter": 0.0,
+   "Search": null,
+   "Calendar": 0.0,
+   "Summarizer": 0.0
+  }
+ },
+ {
+  "file": "plan_then_execute_llm.sg",
+  "name": "PlanThenExecuteLLM",
+  "roles": 5,
+  "states": 8,
+  "transitions": 7,
+  "properties": [],
+  "ifc": false,
+  "ifc_counterexample": {
+   "then": {
+    "src": "Executor",
+    "label": "book",
+    "dst": "Calendar"
+   },
+   "taintedRoles": [
+    "Executor",
+    "Search"
+   ],
+   "path": [
+    {
+     "src": "User",
+     "label": "Goal",
+     "dst": "Planner"
+    },
+    {
+     "src": "Planner",
+     "label": "Plan",
+     "dst": "Executor"
+    },
+    {
+     "src": "Executor",
+     "label": "search",
+     "dst": "Search"
+    },
+    {
+     "src": "Search",
+     "label": "search_result",
+     "dst": "Executor"
+    }
+   ]
+  },
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 7,
+  "decentralised": true,
+  "decentralised_configs": 8,
+  "check_ms": 43.8,
+  "kernel_s": 0.67,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": null,
+   "Planner": 0.0,
+   "Executor": null,
+   "Search": null,
+   "Calendar": 2.0
+  }
+ },
+ {
+  "file": "procurement_xorg.sg",
+  "name": "Procurement",
+  "roles": 3,
+  "states": 7,
+  "transitions": 7,
+  "properties": [
+   [
+    "PayOnlyAfterQuote",
+    true
+   ]
+  ],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 6,
+  "decentralised": true,
+  "decentralised_configs": 8,
+  "check_ms": 43.2,
+  "kernel_s": 0.73,
+  "kernel_ok": true,
+  "kernel_theorems": 4,
+  "kernel_errors": "",
+  "influence_bits": {}
+ },
+ {
+  "file": "react_tools.sg",
+  "name": "ReActTools",
+  "roles": 4,
+  "states": 18,
+  "transitions": 27,
+  "properties": [],
+  "ifc": true,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 12,
+  "decentralised": true,
+  "decentralised_configs": 73,
+  "check_ms": 60.2,
+  "kernel_s": 3.55,
+  "kernel_ok": true,
+  "kernel_theorems": 4,
+  "kernel_errors": "",
+  "influence_bits": {
+   "User": null,
+   "Agent": null,
+   "Search": null,
+   "Calc": null
+  }
+ },
+ {
+  "file": "supervisor_workers.sg",
+  "name": "SupervisorWorkers",
+  "roles": 6,
+  "states": 30,
+  "transitions": 57,
+  "properties": [
+   [
+    "ReduceAfterAllShards",
+    true
+   ]
+  ],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 9,
+  "decentralised": true,
+  "decentralised_configs": 30,
+  "check_ms": 60.9,
+  "kernel_s": 19.67,
+  "kernel_ok": true,
+  "kernel_theorems": 4,
+  "kernel_errors": "",
+  "influence_bits": {}
+ },
+ {
+  "file": "two_phase_commit.sg",
+  "name": "TwoPhaseCommit",
+  "roles": 3,
+  "states": 13,
+  "transitions": 16,
+  "properties": [
+   [
+    "NoCommitAfterNo",
+    true
+   ]
+  ],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 6,
+  "decentralised": true,
+  "decentralised_configs": 17,
+  "check_ms": 52.1,
+  "kernel_s": 1.79,
+  "kernel_ok": true,
+  "kernel_theorems": 4,
+  "kernel_errors": "",
+  "influence_bits": {}
+ },
+ {
+  "file": "two_phase_commit_buggy.sg",
+  "name": "TwoPhaseCommitBuggy",
+  "roles": 3,
+  "states": 8,
+  "transitions": 10,
+  "properties": [
+   [
+    "NoCommitAfterNo",
+    false
+   ]
+  ],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 6,
+  "decentralised": true,
+  "decentralised_configs": 9,
+  "check_ms": 47.0,
+  "kernel_s": 0.62,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {}
+ },
+ {
+  "file": "unrealizable.sg",
+  "name": "Unrealizable",
+  "roles": 4,
+  "states": 3,
+  "transitions": 2,
+  "properties": [
+   [
+    "Order",
+    true
+   ]
+  ],
+  "ifc": null,
+  "ifc_counterexample": null,
+  "no_stuck": true,
+  "completion": true,
+  "bounded": true,
+  "max_messages": 2,
+  "decentralised": false,
+  "decentralised_configs": 5,
+  "check_ms": 52.6,
+  "kernel_s": 0.43,
+  "kernel_ok": true,
+  "kernel_theorems": 3,
+  "kernel_errors": "",
+  "influence_bits": {}
+ }
+]
